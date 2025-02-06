@@ -22,7 +22,7 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['admin_bookmarks:addinstance'] = 'Add a new admin bookmarks block';
-$string['admin_bookmarks:myaddinstance'] = 'Add a new admin bookmarks block to Dashboard';
-$string['pluginname'] = 'Admin bookmarks';
-$string['privacy:metadata'] = 'The Admin bookmarks block only shows data stored in other locations.';
+$string['admin_bookmarks:addinstance'] = 'Ajouter un nouveau bloc de marque-pages administratifs';
+$string['admin_bookmarks:myaddinstance'] = 'Ajouter un nouveau bloc de marque-pages administratifs au tableau de bord';
+$string['pluginname'] = 'Marque-pages administratifs';
+$string['privacy:metadata'] = 'Le bloc de marque-pages administratifs ne montre que des données stockées ailleurs.';

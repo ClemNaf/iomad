@@ -22,13 +22,13 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['adminview'] = 'Admin view';
-$string['allcourses'] = 'Admin user sees all courses';
-$string['configadminview'] = 'Whether to display all courses in the Courses block, or only courses that the admin is enrolled in.';
-$string['confighideallcourseslink'] = 'Remove the \'All courses\' link under the list of courses. (This setting does not affect the admin view.)';
-$string['course_list:addinstance'] = 'Add a new courses block';
-$string['course_list:myaddinstance'] = 'Add a new courses block to Dashboard';
-$string['hideallcourseslink'] = 'Hide \'All courses\' link';
-$string['owncourses'] = 'Admin user sees own courses';
-$string['pluginname'] = 'Courses';
-$string['privacy:metadata'] = 'The Courses block only shows data about courses and does not store any data itself.';
+$string['adminview'] = 'Vue administrateur';
+$string['allcourses'] = 'L\'utilisateur administrateur voit tous les cours';
+$string['configadminview'] = 'Afficher tous les cours dans le bloc Cours, ou seulement les cours dans lesquels l\'administrateur est inscrit.';
+$string['confighideallcourseslink'] = 'Supprimer le lien \'Tous les cours\' sous la liste des cours. (Ce paramètre n\'affecte pas la vue administrateur.)';
+$string['course_list:addinstance'] = 'Ajouter un nouveau bloc de cours';
+$string['course_list:myaddinstance'] = 'Ajouter un nouveau bloc de cours au tableau de bord';
+$string['hideallcourseslink'] = 'Masquer le lien \'Tous les cours\'';
+$string['owncourses'] = 'L\'utilisateur administrateur voit ses propres cours';
+$string['pluginname'] = 'Cours';
+$string['privacy:metadata'] = 'Le bloc Cours ne montre que des données sur les cours et ne stocke aucune donnée en lui-même.';

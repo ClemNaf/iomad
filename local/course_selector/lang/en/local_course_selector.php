@@ -22,20 +22,20 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['courseselectortoomany'] = 'course_selector got more than one selected course, even though multi-select is false';
-$string['cannotcallusgetselectedcourse'] = 'You cannot call course_selector::get_selected_course if multi-select is true';
-$string['clear'] = 'Clear';
-$string['searchoptions'] = 'Search options';
-$string['courseselectorpreserveselected'] = 'Keep selected courses, even if they no longer match the search';
-$string['courseselectorautoselectunique'] = 'If only one course matches the search, select it automatically';
-$string['courseselectorsearchanywhere'] = 'Match the search text anywhere in the course\'s name';
-$string['toomanycoursesmatchsearch'] = 'Too many courses ({$a->count}) match \'{$a->search}\'';
-$string['pleasesearchmore'] = 'Please search some more';
-$string['toomanycoursestoshow'] = 'Too many courses ({$a}) to show';
-$string['pleaseusesearch'] = 'Please use the search';
-$string['nomatchingcourses'] = 'No courses match \'{$a}\'';
-$string['none'] = 'None';
-$string['pluginname'] = 'Course selectors';
-$string['previouslyselectedcourses'] = 'Previously selected courses not matching \'{$a}\'';
-$string['privacy:metadata'] = 'The IOMAD local course selector plugin only shows data stored in other locations.';
-$string['search'] = 'Search';
+$string['courseselectortoomany'] = 'course_selector a obtenu plus d\'un cours sélectionné, même si multi-sélection est faux';
+$string['cannotcallusgetselectedcourse'] = 'Vous ne pouvez pas appeler course_selector::get_selected_course si multi-sélection est vrai';
+$string['clear'] = 'Effacer';
+$string['searchoptions'] = 'Options de recherche';
+$string['courseselectorpreserveselected'] = 'Conserver les cours sélectionnés, même s\'ils ne correspondent plus à la recherche';
+$string['courseselectorautoselectunique'] = 'Si un seul cours correspond à la recherche, le sélectionner automatiquement';
+$string['courseselectorsearchanywhere'] = 'Correspondre au texte de recherche n\'importe où dans le nom du cours';
+$string['toomanycoursesmatchsearch'] = 'Trop de cours ({$a->count}) correspondent à \'{$a->search}\'';
+$string['pleasesearchmore'] = 'Veuillez rechercher un peu plus';
+$string['toomanycoursestoshow'] = 'Trop de cours ({$a}) à afficher';
+$string['pleaseusesearch'] = 'Veuillez utiliser la recherche';
+$string['nomatchingcourses'] = 'Aucun cours ne correspond à \'{$a}\'';
+$string['none'] = 'Aucun';
+$string['pluginname'] = 'Sélecteurs de cours';
+$string['previouslyselectedcourses'] = 'Cours précédemment sélectionnés ne correspondant pas à \'{$a}\'';
+$string['privacy:metadata'] = 'Le plugin Local course selector IOMAD ne montre que des données stockées ailleurs.';
+$string['search'] = 'Rechercher';

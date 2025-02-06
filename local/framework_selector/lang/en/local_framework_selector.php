@@ -26,20 +26,20 @@
  * Strings for component 'local_framework_selector', language 'en'
  */
 
-$string['frameworkselectortoomany'] = 'framework_selector got more than one selected framework, even though multi-select is false';
-$string['cannotcallusgetselectedframework'] = 'You cannot call framework_selector::get_selected_framework if multi-select is true';
-$string['clear'] = 'Clear';
-$string['searchoptions'] = 'Search options';
-$string['frameworkselectorpreserveselected'] = 'Keep selected frameworks, even if they no longer match the search';
-$string['frameworkselectorautoselectunique'] = 'If only one framework matches the search, select it automatically';
-$string['frameworkselectorsearchanywhere'] = 'Match the search text anywhere in the framework\'s name';
-$string['toomanyframeworksmatchsearch'] = 'Too many frameworks ({$a->count}) match \'{$a->search}\'';
-$string['pleasesearchmore'] = 'Please search some more';
-$string['toomanyframeworkstoshow'] = 'Too many frameworks ({$a}) to show';
-$string['pleaseusesearch'] = 'Please use the search';
-$string['nomatchingframeworks'] = 'No frameworks match \'{$a}\'';
-$string['none'] = 'None';
-$string['pluginname'] = 'Framework selectors';
-$string['previouslyselectedframeworks'] = 'Previously selected frameworks not matching \'{$a}\'';
-$string['privacy:metadata'] = 'The IOMAD Local framework selector plugin only shows data stored in other locations.';
-$string['search'] = 'Search';
+$string['frameworkselectortoomany'] = 'framework_selector a obtenu plus d\'un cadre sélectionné, même si multi-sélection est faux';
+$string['cannotcallusgetselectedframework'] = 'Vous ne pouvez pas appeler framework_selector::get_selected_framework si multi-sélection est vrai';
+$string['clear'] = 'Effacer';
+$string['searchoptions'] = 'Options de recherche';
+$string['frameworkselectorpreserveselected'] = 'Conserver les cadres sélectionnés, même s\'ils ne correspondent plus à la recherche';
+$string['frameworkselectorautoselectunique'] = 'Si un seul cadre correspond à la recherche, le sélectionner automatiquement';
+$string['frameworkselectorsearchanywhere'] = 'Correspondre au texte de recherche n\'importe où dans le nom du cadre';
+$string['toomanyframeworksmatchsearch'] = 'Trop de cadres ({$a->count}) correspondent à \'{$a->search}\'';
+$string['pleasesearchmore'] = 'Veuillez rechercher un peu plus';
+$string['toomanyframeworkstoshow'] = 'Trop de cadres ({$a}) à afficher';
+$string['pleaseusesearch'] = 'Veuillez utiliser la recherche';
+$string['nomatchingframeworks'] = 'Aucun cadre ne correspond à \'{$a}\'';
+$string['none'] = 'Aucun';
+$string['pluginname'] = 'Sélecteurs de cadres';
+$string['previouslyselectedframeworks'] = 'Cadres précédemment sélectionnés ne correspondant pas à \'{$a}\'';
+$string['privacy:metadata'] = 'Le plugin Local framework selector IOMAD ne montre que des données stockées ailleurs.';
+$string['search'] = 'Rechercher';

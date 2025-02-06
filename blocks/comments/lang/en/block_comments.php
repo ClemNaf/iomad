@@ -23,7 +23,7 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['comments:myaddinstance'] = 'Add a new comments block to Dashboard';
-$string['comments:addinstance'] = 'Add a new comments block';
-$string['pluginname'] = 'Comments';
-$string['privacy:metadata:core_comment'] = 'A record of comments added.';
+$string['comments:myaddinstance'] = 'Ajouter un nouveau bloc de commentaires au tableau de bord';
+$string['comments:addinstance'] = 'Ajouter un nouveau bloc de commentaires';
+$string['pluginname'] = 'Commentaires';
+$string['privacy:metadata:core_comment'] = 'Un enregistrement des commentaires ajoutés.';

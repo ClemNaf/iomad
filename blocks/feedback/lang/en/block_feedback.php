@@ -22,7 +22,7 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['feedback'] = 'Feedback';
-$string['feedback:addinstance'] = 'Add a new feedback block';
-$string['pluginname'] = 'Feedback';
-$string['privacy:metadata'] = 'The Feedback block only shows data stored in other locations.';
+$string['feedback'] = 'Retour';
+$string['feedback:addinstance'] = 'Ajouter un nouveau bloc de retour';
+$string['pluginname'] = 'Retour';
+$string['privacy:metadata'] = 'Le bloc de retour ne montre que des données stockées ailleurs.';

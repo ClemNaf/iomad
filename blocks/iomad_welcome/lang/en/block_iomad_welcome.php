@@ -21,10 +21,11 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['dashboardtext'] = 'Click here to start using IOMAD';
-$string['iomad_welcome:addinstance'] = 'Add a new IOMAD Welcome block';
-$string['iomad_welcome:myaddinstance'] = 'Add a new IOMAD Welcome block to the user\'s dashboard';
-$string['iomad_welcome:view'] = 'View IOMAD Welcome';
-$string['message'] = 'Welcome to <b>IOMAD</b> from E-Learn Design Limited. IOMAD is controlled from its own Dashboard. Follow the link below. You will start by creating your first company.';
-$string['pluginname'] = 'IOMAD - Welcome';
-$string['privacy:metadata'] = 'The IOMAD Welcome block only shows data stored in other locations.';
+// French
+$string['dashboardtext'] = 'Cliquez ici pour commencer à utiliser IOMAD';
+$string['iomad_welcome:addinstance'] = 'Ajouter un nouveau bloc de bienvenue IOMAD';
+$string['iomad_welcome:myaddinstance'] = 'Ajouter un nouveau bloc de bienvenue IOMAD au tableau de bord de l\'utilisateur';
+$string['iomad_welcome:view'] = 'Voir IOMAD Welcome';
+$string['message'] = 'Bienvenue sur <b>IOMAD</b> d\'E-Learn Design Limited. IOMAD est contrôlé à partir de son propre tableau de bord. Suivez le lien ci-dessous. Vous commencerez par créer votre première entreprise.';
+$string['pluginname'] = 'IOMAD - Bienvenue';
+$string['privacy:metadata'] = 'Le bloc de bienvenue IOMAD ne montre que des données stockées à d\'autres endroits.';

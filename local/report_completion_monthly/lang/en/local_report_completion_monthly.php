@@ -21,11 +21,11 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['blocktitle'] = 'Completion report by month';
-$string['pluginname'] = 'Completion report by month';
-$string['privacy:metadata'] = 'The \'Local Completion report by month report\' only shows data stored in other locations.';
-$string['report_completion_monthly_title'] = 'Completion report by month';
-$string['report_completion_monthly:view'] = 'View the \'Completion report by month\' report';
-$string['repuserlicallocation'] = 'Completion report by month';
-$string['totalallocate'] = 'Number of completions';
-$string['numtotal'] = 'Total completions';
+$string['blocktitle'] = 'Rapport de réalisation par mois';
+$string['pluginname'] = 'Rapport de réalisation par mois';
+$string['privacy:metadata'] = 'Le rapport \'Rapport de réalisation par mois local\' ne montre que les données stockées dans d\'autres emplacements.';
+$string['report_completion_monthly_title'] = 'Rapport de réalisation par mois';
+$string['report_completion_monthly:view'] = 'Voir le rapport \'Rapport de réalisation par mois\'';
+$string['repuserlicallocation'] = 'Rapport de réalisation par mois';
+$string['totalallocate'] = 'Nombre de réalisations';
+$string['numtotal'] = 'Total des réalisations';

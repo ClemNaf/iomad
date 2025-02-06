@@ -24,13 +24,13 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['competenciestoreview'] = 'Competencies to review';
-$string['lp:addinstance'] = 'Add a new learning plans block';
-$string['lp:myaddinstance'] = 'Add a new learning plans block to Dashboard';
-$string['myplans'] = 'My plans';
-$string['noactiveplans'] = 'No active plans at the moment.';
-$string['planstoreview'] = 'Plans to review';
-$string['pluginname'] = 'Learning plans';
-$string['viewmore'] = 'View more...';
-$string['viewotherplans'] = 'View other plans...';
-$string['privacy:metadata'] = 'The Learning plans block only shows data stored in other locations.';
+$string['competenciestoreview'] = 'Compétences à réviser';
+$string['lp:addinstance'] = 'Ajouter un nouveau bloc de plans d\'apprentissage';
+$string['lp:myaddinstance'] = 'Ajouter un nouveau bloc de plans d\'apprentissage au tableau de bord';
+$string['myplans'] = 'Mes plans';
+$string['noactiveplans'] = 'Aucun plan actif pour le moment.';
+$string['planstoreview'] = 'Plans à réviser';
+$string['pluginname'] = 'Plans d\'apprentissage';
+$string['viewmore'] = 'Voir plus...';
+$string['viewotherplans'] = 'Voir d\'autres plans...';
+$string['privacy:metadata'] = 'Le bloc Plans d\'apprentissage ne montre que des données stockées ailleurs.';

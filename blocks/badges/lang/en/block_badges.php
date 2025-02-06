@@ -23,9 +23,9 @@
  * @author     Yuliya Bozhko <yuliya.bozhko@totaralms.com>
  */
 
-$string['pluginname'] = 'Latest badges';
-$string['numbadgestodisplay'] = 'Number of latest badges to display';
-$string['nothingtodisplay'] = 'You have no badges to display';
-$string['badges:addinstance'] = 'Add a new Latest badges block';
-$string['badges:myaddinstance'] = 'Add a new Latest badges block to Dashboard';
-$string['privacy:metadata'] = 'The Latest badges block only shows data stored in other locations.';
+$string['pluginname'] = 'Derniers badges';
+$string['numbadgestodisplay'] = 'Nombre de derniers badges à afficher';
+$string['nothingtodisplay'] = 'Vous n\'avez aucun badge à afficher';
+$string['badges:addinstance'] = 'Ajouter un nouveau bloc Derniers badges';
+$string['badges:myaddinstance'] = 'Ajouter un nouveau bloc Derniers badges au tableau de bord';
+$string['privacy:metadata'] = 'Le bloc Derniers badges ne montre que des données stockées ailleurs.';

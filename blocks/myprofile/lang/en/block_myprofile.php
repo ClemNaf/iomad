@@ -23,23 +23,23 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['contentsettings'] = 'Display settings for content region';
-$string['display_picture'] = 'Display picture';
-$string['display_country'] = 'Display country';
-$string['display_city'] = 'Display city';
-$string['display_email'] = 'Display email';
-$string['display_phone1'] = 'Display phone';
-$string['display_phone2'] = 'Display mobile phone';
-$string['display_idnumber'] = 'Display ID number';
-$string['display_institution'] = 'Display institution';
-$string['display_address'] = 'Display address';
-$string['display_firstaccess'] = 'Display first access';
-$string['display_lastaccess'] = 'Display last access';
-$string['display_currentlogin'] = 'Display current login';
-$string['display_lastip'] = 'Display last IP';
-$string['display_lastlogin'] = 'Display last login';
-$string['myprofile:addinstance'] = 'Add a new logged in user block';
-$string['myprofile:myaddinstance'] = 'Add a new logged in user block to Dashboard';
-$string['myprofile_settings'] = 'Visible user information';
-$string['pluginname'] = 'Logged in user';
-$string['privacy:metadata'] = 'The Logged in user block only shows information about the logged in user and does not store data itself.';
+$string['contentsettings'] = 'Afficher les paramètres pour la région de contenu';
+$string['display_picture'] = 'Afficher l\'image';
+$string['display_country'] = 'Afficher le pays';
+$string['display_city'] = 'Afficher la ville';
+$string['display_email'] = 'Afficher l\'adresse courriel';
+$string['display_phone1'] = 'Afficher le téléphone';
+$string['display_phone2'] = 'Afficher le téléphone mobile';
+$string['display_idnumber'] = 'Afficher le numéro d\'identification';
+$string['display_institution'] = 'Afficher l\'institution';
+$string['display_address'] = 'Afficher l\'adresse';
+$string['display_firstaccess'] = 'Afficher le premier accès';
+$string['display_lastaccess'] = 'Afficher le dernier accès';
+$string['display_currentlogin'] = 'Afficher la connexion actuelle';
+$string['display_lastip'] = 'Afficher la dernière adresse IP';
+$string['display_lastlogin'] = 'Afficher la dernière connexion';
+$string['myprofile:addinstance'] = 'Ajouter un nouveau bloc d\'utilisateur connecté';
+$string['myprofile:myaddinstance'] = 'Ajouter un nouveau bloc d\'utilisateur connecté au tableau de bord';
+$string['myprofile_settings'] = 'Informations utilisateur visibles';
+$string['pluginname'] = 'Utilisateur connecté';
+$string['privacy:metadata'] = 'Le bloc d\'utilisateur connecté ne montre que des informations sur l\'utilisateur connecté et ne stocke pas de données lui-même.';

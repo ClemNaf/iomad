@@ -22,11 +22,11 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['completionprogressdetails'] = 'Completion progress details';
-$string['completionstatus:addinstance'] = 'Add a new course completion status block';
-$string['criteriagroup'] = 'Criteria group';
-$string['firstofsecond'] = '{$a->first} of {$a->second}';
-$string['pluginname'] = 'Course completion status';
-$string['requirement'] = 'Requirement';
-$string['returntocourse'] = 'Return to course';
-$string['privacy:metadata'] = 'The Course completion status block only shows information about course completion and does not store any data of its own.';
+$string['completionprogressdetails'] = 'Détails de progression de la complétion';
+$string['completionstatus:addinstance'] = 'Ajouter un nouveau bloc de statut de complétion de cours';
+$string['criteriagroup'] = 'Groupe de critères';
+$string['firstofsecond'] = '{$a->first} de {$a->second}';
+$string['pluginname'] = 'Statut de complétion de cours';
+$string['requirement'] = 'Exigence';
+$string['returntocourse'] = 'Retour au cours';
+$string['privacy:metadata'] = 'Le bloc de statut de complétion de cours ne montre que des informations sur la complétion du cours et ne stocke aucune donnée en propre.';

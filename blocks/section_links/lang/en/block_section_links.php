@@ -22,20 +22,20 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['incby1'] = 'Increase by';
-$string['incby1_help'] = 'This is the value the section is incremented each time a section link is displayed starting at 1.';
-$string['incby2'] = 'Alternative increase by';
-$string['incby2_help'] = 'This is the value the section is incremented each time a section link is displayed starting at 1.';
-$string['jumptocurrenttopic'] = 'Jump to current topic';
-$string['jumptocurrentweek'] = 'Jump to current week';
-$string['numsections1'] = 'Number of sections';
-$string['numsections1_help'] = 'Once the number of sections in the course reaches this number then the increment by value is used.';
-$string['numsections2'] = 'Alternative number of sections';
-$string['numsections2_help'] = 'Once the number of sections in the course reaches this number then the Alternative increment by value is used.';
-$string['pluginname'] = 'Section links';
-$string['section_links:addinstance'] = 'Add a new section links block';
-$string['showsectionname'] = 'Display section name';
-$string['showsectionname_help'] = 'Display section name in addition to section number';
-$string['topics'] = 'Topics';
-$string['weeks'] = 'Weeks';
-$string['privacy:metadata'] = 'The Section links block only shows data stored in other locations.';
+$string['incby1'] = 'Augmenter de';
+$string['incby1_help'] = 'C\'est la valeur de la section qui est incrémentée à chaque fois qu\'un lien de section est affiché à partir de 1.';
+$string['incby2'] = 'Augmenter de manière alternative';
+$string['incby2_help'] = 'C\'est la valeur de la section qui est incrémentée à chaque fois qu\'un lien de section est affiché à partir de 1.';
+$string['jumptocurrenttopic'] = 'Aller au sujet actuel';
+$string['jumptocurrentweek'] = 'Aller à la semaine actuelle';
+$string['numsections1'] = 'Nombre de sections';
+$string['numsections1_help'] = 'Une fois que le nombre de sections du cours atteint ce nombre, la valeur d\'incrémentation est utilisée.';
+$string['numsections2'] = 'Nombre de sections alternatif';
+$string['numsections2_help'] = 'Une fois que le nombre de sections du cours atteint ce nombre, la valeur d\'incrémentation alternative est utilisée.';
+$string['pluginname'] = 'Liens de section';
+$string['section_links:addinstance'] = 'Ajouter un nouveau bloc de liens de section';
+$string['showsectionname'] = 'Afficher le nom de la section';
+$string['showsectionname_help'] = 'Afficher le nom de la section en plus du numéro de section';
+$string['topics'] = 'Sujets';
+$string['weeks'] = 'Semaines';
+$string['privacy:metadata'] = 'Le bloc de liens de section ne montre que des données stockées ailleurs.';

@@ -21,14 +21,14 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['blocktitle'] = 'License Allocations Report';
-$string['pluginname'] = 'License Allocations Report';
-$string['privacy:metadata'] = 'The \'Local IOMAD license allocations report\' only shows data stored in other locations.';
-$string['report_license_usage_title'] = 'License allocations report';
-$string['report_license_usage:view'] = 'View the license allocations report';
-$string['repuserlicallocation'] = 'License allocations report';
-$string['totalallocate'] = 'Number of allocations';
-$string['totalunallocate'] = 'Number of unallocations';
-$string['numstart'] = 'Previously allocated';
-$string['numnet'] = 'Net allocations';
-$string['numtotal'] = 'Total allocated';
+$string['blocktitle'] = 'Rapport des allocations de licences';
+$string['pluginname'] = 'Rapport des allocations de licences';
+$string['privacy:metadata'] = 'Le plugin \'Rapport des allocations de licences IOMAD\' ne montre que les données stockées dans d\'autres emplacements.';
+$string['report_license_usage_title'] = 'Rapport des allocations de licences';
+$string['report_license_usage:view'] = 'Voir le rapport des allocations de licences';
+$string['repuserlicallocation'] = 'Rapport des allocations de licences';
+$string['totalallocate'] = 'Nombre d\'allocations';
+$string['totalunallocate'] = 'Nombre de désallocations';
+$string['numstart'] = 'Précédemment alloué';
+$string['numnet'] = 'Allocations nettes';
+$string['numtotal'] = 'Total alloué';

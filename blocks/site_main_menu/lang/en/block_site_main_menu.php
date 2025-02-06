@@ -23,6 +23,6 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Main menu';
-$string['site_main_menu:addinstance'] = 'Add a new main menu block';
-$string['privacy:metadata'] = 'The Main menu block only shows data stored in other locations.';
+$string['pluginname'] = 'Menu principal';
+$string['site_main_menu:addinstance'] = 'Ajouter un nouveau bloc de menu principal';
+$string['privacy:metadata'] = 'Le bloc de menu principal ne montre que des données stockées ailleurs.';

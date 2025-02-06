@@ -23,10 +23,10 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['configtitle'] = 'Mentees block title';
-$string['configtitleblankhides'] = 'Mentees block title (no title if blank)';
-$string['mentees:addinstance'] = 'Add a new mentees block';
-$string['mentees:myaddinstance'] = 'Add a new mentees block to Dashboard';
-$string['newmenteesblock'] = '(new Mentees block)';
+$string['configtitle'] = 'Titre du bloc Mentees';
+$string['configtitleblankhides'] = 'Titre du bloc Mentees (pas de titre si vide)';
+$string['mentees:addinstance'] = 'Ajouter un nouveau bloc Mentees';
+$string['mentees:myaddinstance'] = 'Ajouter un nouveau bloc Mentees au tableau de bord';
+$string['newmenteesblock'] = '(nouveau bloc Mentees)';
 $string['pluginname'] = 'Mentees';
-$string['privacy:metadata'] = 'The Mentees block only shows data stored in other locations.';
+$string['privacy:metadata'] = 'Le bloc Mentees ne montre que des données stockées ailleurs.';

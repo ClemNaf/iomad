@@ -22,20 +22,19 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['anycollection'] = 'Any';
-$string['anytype'] = 'All';
-$string['configtitle'] = 'Tags block title';
-$string['disabledtags'] = 'Tags are disabled';
-$string['defaultdisplay'] = 'Display tags';
+$string['anycollection'] = 'Tous';
+$string['anytype'] = 'Tous';
+$string['configtitle'] = 'Titre du bloc Tags';
+$string['disabledtags'] = 'Les tags sont désactivés';
+$string['defaultdisplay'] = 'Afficher les tags';
 $string['pluginname'] = 'Tags';
-$string['recursivecontext'] = 'Include child contexts';
-$string['recursivecontext_help'] = 'If unticked, tags of items in the context specified above will be displayed, but not tags of items in lower contexts. For example, course tags may be displayed, but not course activity tags.';
-$string['standardonly'] = 'Only standard';
-$string['tagcollection'] = 'Tag collection';
-$string['tagcollection_help'] = 'Select tag collection to display tags from. If you choose "Any" '
-        . 'the tags from all collections except for those marked with * will be displayed';
-$string['taggeditemscontext'] = 'Tagged items context';
-$string['taggeditemscontext_help'] = 'You can limit the tag cloud to the tags that are present in the current course category, course or module';
-$string['tags:addinstance'] = 'Add a new tags block';
-$string['tags:myaddinstance'] = 'Add a new tags block to Dashboard';
-$string['privacy:metadata'] = 'The Tags block only shows data stored in other locations.';
+$string['recursivecontext'] = 'Inclure les contextes enfants';
+$string['recursivecontext_help'] = 'Si décoché, les tags des éléments dans le contexte spécifié ci-dessus seront affichés, mais pas les tags des éléments dans les contextes inférieurs. Par exemple, les tags de cours peuvent être affichés, mais pas les tags d\'activités de cours.';
+$string['standardonly'] = 'Seulement standard';
+$string['tagcollection'] = 'Collection de tags';
+$string['tagcollection_help'] = 'Sélectionnez la collection de tags pour afficher les tags. Si vous choisissez "Tous", les tags de toutes les collections sauf ceux marqués avec * seront affichés';
+$string['taggeditemscontext'] = 'Contexte des éléments tagués';
+$string['taggeditemscontext_help'] = 'Vous pouvez limiter le nuage de tags aux tags présents dans la catégorie de cours, le cours ou le module actuel';
+$string['tags:addinstance'] = 'Ajouter un nouveau bloc de tags';
+$string['tags:myaddinstance'] = 'Ajouter un nouveau bloc de tags au tableau de bord';
+$string['privacy:metadata'] = 'Le bloc de tags ne montre que des données stockées ailleurs.';

@@ -24,19 +24,19 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['everything'] = 'Everything';
-$string['courses'] = 'Categories and courses';
-$string['coursestructures'] = 'Categories, courses, and course structures';
-$string['courseactivities'] = 'Categories, courses, and course activities';
-$string['enabledockdesc'] = 'Allow the user to dock this block';
-$string['expansionlimit'] = 'Generate navigation for the following';
-$string['linkcategoriesdesc'] = 'Display categories as links';
-$string['navigation:addinstance'] = 'Add a new navigation block';
-$string['navigation:myaddinstance'] = 'Add a new navigation block to Dashboard';
+$string['everything'] = 'Tout';
+$string['courses'] = 'Catégories et cours';
+$string['coursestructures'] = 'Catégories, cours et structures de cours';
+$string['courseactivities'] = 'Catégories, cours et activités de cours';
+$string['enabledockdesc'] = 'Permettre à l\'utilisateur d\'accrocher ce bloc';
+$string['expansionlimit'] = 'Générer la navigation pour les éléments suivants';
+$string['linkcategoriesdesc'] = 'Afficher les catégories comme des liens';
+$string['navigation:addinstance'] = 'Ajouter un nouveau bloc de navigation';
+$string['navigation:myaddinstance'] = 'Ajouter un nouveau bloc de navigation au tableau de bord';
 $string['pluginname'] = 'Navigation';
-$string['trimmode'] = 'Trim mode';
-$string['trimmoderight'] = 'Trim characters from the right';
-$string['trimmodeleft'] = 'Trim characters from the left';
-$string['trimmodecenter'] = 'Trim characters from the center';
-$string['trimlength'] = 'How many characters to trim to';
-$string['privacy:metadata'] = 'The Navigation block only shows data stored in other locations.';
+$string['trimmode'] = 'Mode de rognage';
+$string['trimmoderight'] = 'Rogner les caractères de droite';
+$string['trimmodeleft'] = 'Rogner les caractères de gauche';
+$string['trimmodecenter'] = 'Rogner les caractères du centre';
+$string['trimlength'] = 'Combien de caractères à rogner';
+$string['privacy:metadata'] = 'Le bloc de navigation ne montre que des données stockées ailleurs.';

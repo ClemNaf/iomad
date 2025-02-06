@@ -21,9 +21,10 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['iomad_link:addinstance'] = 'Add a new IOMAD Dashboard link block';
-$string['iomad_link:myaddinstance'] = 'Add a new IOMAD Dashboard link block to the users dashboard';
-$string['iomad_link:view'] = 'View link to IOMAD Dashboard';
-$string['link'] = 'Go to IOMAD Dashboard';
-$string['pluginname'] = 'IOMAD - Link to Dashboard';
-$string['privacy:metadata'] = 'The IOMAD Dashboard link block only shows data stored in other locations.';
+//French
+$string['iomad_link:addinstance'] = 'Ajouter un nouveau bloc de lien vers le tableau de bord IOMAD';
+$string['iomad_link:myaddinstance'] = 'Ajouter un nouveau bloc de lien vers le tableau de bord IOMAD sur le tableau de bord de l\'utilisateur';
+$string['iomad_link:view'] = 'Afficher le lien vers le tableau de bord IOMAD';
+$string['link'] = 'Aller au tableau de bord IOMAD';
+$string['pluginname'] = 'IOMAD - Lien vers le tableau de bord';
+$string['privacy:metadata'] = 'Le bloc de lien vers le tableau de bord IOMAD ne montre que les données stockées à d\'autres endroits.';

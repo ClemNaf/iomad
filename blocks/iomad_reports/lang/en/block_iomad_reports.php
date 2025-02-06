@@ -21,10 +21,12 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['iomad_reports:addinstance'] = 'Add a new IOMAD Reports block';
-$string['iomad_reports:myaddinstance'] = 'Add a new IOMAD Reports block to the users dashboard';
-$string['iomad_reports:view'] = 'Access to IOMAD Reports';
-$string['link'] = 'Go to IOMAD Dashboard';
-$string['nocompanyselected'] = 'No company is selected';
-$string['pluginname'] = 'IOMAD Reports';
-$string['privacy:metadata'] = 'The IOMAD company selector block only shows data stored in other locations.';
+// French
+$string['iomad_reports:addinstance'] = 'Ajouter un nouveau bloc de rapports IOMAD';
+$string['iomad_reports:myaddinstance'] = 'Ajouter un nouveau bloc de rapports IOMAD au tableau de bord des utilisateurs';
+$string['iomad_reports:view'] = 'Accéder aux rapports IOMAD';
+$string['link'] = 'Aller au tableau de bord IOMAD';
+$string['nocompanyselected'] = 'Aucune entreprise n\'est sélectionnée';
+$string['pluginname'] = 'Rapports IOMAD';
+$string['privacy:metadata'] = 'Le bloc de sélection de l\'entreprise IOMAD ne montre que des données stockées à d\'autres endroits.';
+

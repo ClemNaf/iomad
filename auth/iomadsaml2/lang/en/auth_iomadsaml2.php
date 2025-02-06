@@ -22,229 +22,228 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['alterlogout'] = 'Alternative Logout URL';
-$string['alterlogout_help'] = 'The URL to redirect a user after all internal logout mechanisms are run';
-$string['anyauth'] = 'Allowed any auth type';
-$string['anyauth_help'] = 'Yes: Allow SAML login for all users? No: Only users who have iomadsaml2 as their type.';
-$string['anyauthotherdisabled'] = 'You have logged in successfully as \'{$a->username}\' but your auth type of \'{$a->auth}\' is disabled.';
-$string['attemptsignout'] = 'Attempt IdP Signout';
-$string['attemptsignout_help'] = 'This will attempt to communicate with the IdP to send a sign out request';
-$string['auth_iomadsaml2description'] = 'Authenticate with a IOMAD SAML2 Identity Provider (IdP)';
-$string['auth_iomadsaml2blockredirectdescription'] = 'Redirect or display message to IOMAD SAML2 logins based on configured group restrictions';
-$string['autocreate'] = 'Auto create users';
-$string['autocreate_help'] = 'Allow creation of Moodle users on demand';
-$string['autologin'] = 'Auto-login';
-$string['autologin_help'] = 'On pages that allow guest access without login, automatically log users into Moodle with a real user account if they are logged in to the IdP (using passive authentication).';
-$string['autologinbysession'] = 'Check once per session';
-$string['autologinbycookie'] = 'Check when the specified cookie exists or changes';
-$string['autologincookie'] = 'Auto-login cookie';
-$string['autologincookie_help'] = 'Name of cookie used to decide when to attempt auto-login (only relevant if the cookie option is selected above).';
-$string['availableidps'] = 'Select available IdPs';
-$string['availableidps_help'] = 'If an IdP metadata xml contains multiple IdP entities, you will need to select which entities are availiable
-for users to login with.';
-$string['blockredirectheading'] = 'Account blocking actions';
-$string['attrsimple'] = 'Simplify attributes';
-$string['attrsimple_help'] = 'Various IdP\'s such as ADFS use long attribute keys such as urns or namespaced xml schema names. If set to Yes this will simplify these, eg map http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname to such \'givenname\'.';
-$string['certificatedetails'] = 'Certificate details';
-$string['certificatedetailshelp'] = '<h1>SAML2 auto generated public certificate contents</h1><p>The path for the cert is here:</p>';
-$string['checkcertificateexpiry'] = 'SAML certificate expiry';
-$string['checkcertificateexpired'] = 'SAML certificate has expired {$a} ago';
-$string['checkcertificatewarn'] = 'SAML certificate will expire in {$a}';
-$string['checkcertificateok'] = 'SAML certificate will expire in {$a}';
-$string['certificate_help'] = 'Regenerate the Private Key and Certificate used by this SP. | <a href=\'{$a}\'>View SP certificate</a>';
-$string['certificatelock_help'] = 'Locking the certificates will prevent them from being overwritten once generated.';
-$string['certificatelock'] = 'Lock certificate';
-$string['certificatelock_locked'] = 'The certificate is locked';
-$string['certificatelock_lockedmessage'] = 'The certificates are currently locked.';
-$string['certificatelock_unlock'] = 'Unlock certificates';
-$string['certificatelock_regenerate'] = 'Not regenerating certificates because they have been locked!';
-$string['certificatelock_warning'] = 'Warning. You are about to lock the certificates, are you sure you want to do this? <br> The certificates are not currently locked';
-$string['certificate'] = 'Regenerate certificate';
-$string['commonname'] = 'Common Name';
-$string['countryname'] = 'Country';
-$string['debug'] = 'Debugging';
-$string['debug_help'] = '<p>This adds extra debugging to the normal moodle log | <a href=\'{$a}\'>View SSP config</a></p>';
-$string['duallogin'] = 'Dual login';
-$string['duallogin_help'] = '
-<p>If on, then users will see both manual and a SAML login button. If off they will always be taken directly to the IdP login page.</p>
-<p>If passive, then the users that are already authenticated into the IDP will be automatically logged in, otherwise they will be sent to Moodle login page.</p>
-<p>If off, then admins can still see the manual login page via /login/index.php?saml=off</p>
-<p>If on, then external pages can deep link into moodle using saml eg /course/view.php?id=45&saml=on</p>
-<p>If set to test IdP connection, the network will be checked for connectivity, and if functional, SAML login will be initiated.<p/>';
-$string['emailtaken'] = 'Can\'t create a new account, because {$a} email address is already registered';
-$string['emailtakenupdate'] = 'Your email wasn\'t updated, because email address {$a} is already registered';
-$string['errorinvalidautologin'] = 'Invalid autologin request';
-$string['errorparsingxml'] = 'Error parsing XML: {$a}';
-$string['exception'] = 'SAML2 exception: {$a}';
-$string['expirydays'] = 'Expiry in Days';
-$string['error'] = 'Login error';
-$string['fielddelimiter'] = 'Field delimiter';
-$string['fielddelimiter_help'] = 'The delimiter to use when a field receives an array of values from the IdP.';
-$string['flaggedresponsetypemessage'] = 'Display custom message';
-$string['flaggedresponsetyperedirect'] = 'Redirect to external URL';
-$string['flagredirecturl'] = 'Redirect URL';
-$string['flagredirecturl_help'] = '
-<p>The URL to redirect a user is not allowed to access Moodle based on configured group restrictions.</p>
-<p>(Only utilised when \'Response type\' is \'Redirect to external URL\'.)</p>';
-$string['flagmessage'] = 'Response message';
-$string['flagmessage_help'] = '
-<p>The message to display when a user is not allowed to access Moodle based on configured group restrictions.</p>
-<p>(Only displayed when \'Response response type\' is \'Display custom message\'.)</p>';
-$string['flagmessage_default'] = 'You are logged in to your identity provider however, this account has limited access to Moodle, please contact your administrator for more details.';
-$string['flagresponsetype'] = 'Account blocking response type';
-$string['flagresponsetype_help'] = 'If access is blocked based on configured group restrictions, how should Moodle respond?';
-$string['idpattr_help'] = 'Which IdP attribute should be matched against a Moodle user field?';
-$string['idpattr'] = 'Mapping IdP';
-$string['idpmetadata_badurl'] = 'Invalid metadata at {$a}';
-$string['idpmetadata_help'] = 'To use multiple IdPs enter each public metadata url on a new line.<br/>To override a name, place text before the http. eg. "Forced IdP Name http://ssp.local/simplesaml/iomadsaml2/idp/metadata.php"';
-$string['idpmetadata'] = 'IdP metadata xml OR public xml URL';
-$string['idpmetadata_invalid'] = 'The IdP XML isn\'t valid';
-$string['idpmetadata_noentityid'] = 'The IdP XML has no entityID';
-$string['idpmetadatarefresh_help'] = 'Run a scheduled task to update IdP metadata from IdP metadata URL';
-$string['idpmetadatarefresh'] = 'IdP metadata refresh';
-$string['idpnamedefault'] = 'Login via IOMAD SAML2';
-$string['idpnamedefault_varaible'] = 'Login via IOMAD SAML2 ({$a})';
-$string['idpname_help'] = 'eg myUNI - this is detected from the metadata and will show on the dual login page (if enabled)';
-$string['idpname'] = 'IdP label override';
-$string['localityname'] = 'Locality';
+ $string['alterlogout'] = 'Alternative Logout URL';
+ $string['alterlogout_help'] = 'L\'URL pour rediriger un utilisateur après l\'exécution de tous les mécanismes de déconnexion internes';
+ $string['anyauth'] = 'Allowed any auth type';
+ $string['anyauth_help'] = 'Oui : Autoriser la connexion SAML pour tous les utilisateurs ? Non : Seulement les utilisateurs ayant iomadsaml2 comme type.';
+ $string['anyauthotherdisabled'] = 'Vous vous êtes connecté avec succès en tant que \'{$a->username}\' mais votre type d\'authentification \'{$a->auth}\' est désactivé.';
+ $string['attemptsignout'] = 'Attempt IdP Signout';
+ $string['attemptsignout_help'] = 'Cela tentera de communiquer avec l\'IdP pour envoyer une demande de déconnexion';
+ $string['auth_iomadsaml2description'] = 'Authenticate with a IOMAD SAML2 Identity Provider (IdP)';
+ $string['auth_iomadsaml2blockredirectdescription'] = 'Rediriger ou afficher un message aux connexions IOMAD SAML2 en fonction des restrictions de groupe configurées';
+ $string['autocreate'] = 'Auto create users';
+ $string['autocreate_help'] = 'Autoriser la création d\'utilisateurs Moodle à la demande';
+ $string['autologin'] = 'Auto-login';
+ $string['autologin_help'] = 'Sur les pages permettant l\'accès invité sans connexion, connectez automatiquement les utilisateurs à Moodle avec un compte utilisateur réel s\'ils sont connectés à l\'IdP (en utilisant l\'authentification passive).';
+ $string['autologinbysession'] = 'Check once per session';
+ $string['autologinbycookie'] = 'Check when the specified cookie exists or changes';
+ $string['autologincookie'] = 'Auto-login cookie';
+ $string['autologincookie_help'] = 'Nom du cookie utilisé pour décider quand tenter la connexion automatique (uniquement pertinent si l\'option cookie est sélectionnée ci-dessus).';
+ $string['availableidps'] = 'Select available IdPs';
+ $string['availableidps_help'] = 'Si un fichier XML de métadonnées IdP contient plusieurs entités IdP, vous devrez sélectionner les entités disponibles pour que les utilisateurs puissent se connecter.';
+ $string['blockredirectheading'] = 'Account blocking actions';
+ $string['attrsimple'] = 'Simplify attributes';
+ $string['attrsimple_help'] = 'Divers IdP tels qu\'ADFS utilisent des clés d\'attributs longues telles que des urns ou des noms de schéma XML avec espace de noms. Si défini sur Oui, cela simplifiera ces clés, par exemple, mappe http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname à \'givenname\'.';
+ $string['certificatedetails'] = 'Certificate details';
+ $string['certificatedetailshelp'] = '<h1>Contenu du certificat public auto-généré SAML2</h1><p>Le chemin du certificat est ici :</p>';
+ $string['checkcertificateexpiry'] = 'SAML certificate expiry';
+ $string['checkcertificateexpired'] = 'Le certificat SAML a expiré il y a {$a}';
+ $string['checkcertificatewarn'] = 'Le certificat SAML expirera dans {$a}';
+ $string['checkcertificateok'] = 'Le certificat SAML expirera dans {$a}';
+ $string['certificate_help'] = 'Régénérer la clé privée et le certificat utilisés par ce SP. | <a href=\'{$a}\'>Voir le certificat SP</a>';
+ $string['certificatelock_help'] = 'Verrouiller les certificats empêchera leur réécriture une fois générés.';
+ $string['certificatelock'] = 'Lock certificate';
+ $string['certificatelock_locked'] = 'Le certificat est verrouillé';
+ $string['certificatelock_lockedmessage'] = 'Les certificats sont actuellement verrouillés.';
+ $string['certificatelock_unlock'] = 'Unlock certificates';
+ $string['certificatelock_regenerate'] = 'Ne pas régénérer les certificats car ils sont verrouillés !';
+ $string['certificatelock_warning'] = 'Attention. Vous êtes sur le point de verrouiller les certificats, êtes-vous sûr de vouloir faire cela ? <br> Les certificats ne sont pas actuellement verrouillés';
+ $string['certificate'] = 'Régénérer le certificat';
+ $string['commonname'] = 'Common Name';
+ $string['countryname'] = 'Country';
+ $string['debug'] = 'Debugging';
+ $string['debug_help'] = '<p>Cela ajoute un débogage supplémentaire au journal Moodle normal | <a href=\'{$a}\'>Voir la configuration SSP</a></p>';
+ $string['duallogin'] = 'Dual login';
+ $string['duallogin_help'] = '
+ <p>Si activé, les utilisateurs verront à la fois un bouton de connexion manuel et un bouton de connexion SAML. Si désactivé, ils seront toujours dirigés directement vers la page de connexion IdP.</p>
+ <p>Si passif, les utilisateurs déjà authentifiés dans l\'IDP seront automatiquement connectés, sinon ils seront envoyés à la page de connexion Moodle.</p>
+ <p>Si désactivé, les administrateurs peuvent toujours voir la page de connexion manuelle via /login/index.php?saml=off</p>
+ <p>Si activé, les pages externes peuvent créer des liens profonds dans Moodle en utilisant saml, par exemple /course/view.php?id=45&saml=on</p>
+ <p>Si défini sur tester la connexion IdP, le réseau sera vérifié pour la connectivité, et si fonctionnel, la connexion SAML sera initiée.<p/>';
+ $string['emailtaken'] = 'Can\'t create a new account, because {$a} email address is already registered';
+ $string['emailtakenupdate'] = 'Votre e-mail n\'a pas été mis à jour, car l\'adresse e-mail {$a} est déjà enregistrée';
+ $string['errorinvalidautologin'] = 'Invalid autologin request';
+ $string['errorparsingxml'] = 'Erreur lors de l\'analyse XML : {$a}';
+ $string['exception'] = 'SAML2 exception: {$a}';
+ $string['expirydays'] = 'Expiry in Days';
+ $string['error'] = 'Login error';
+ $string['fielddelimiter'] = 'Field delimiter';
+ $string['fielddelimiter_help'] = 'Le délimiteur à utiliser lorsqu\'un champ reçoit un tableau de valeurs de l\'IdP.';
+ $string['flaggedresponsetypemessage'] = 'Display custom message';
+ $string['flaggedresponsetyperedirect'] = 'Redirect to external URL';
+ $string['flagredirecturl'] = 'Redirect URL';
+ $string['flagredirecturl_help'] = '
+ <p>L\'URL pour rediriger un utilisateur n\'est pas autorisé à accéder à Moodle en fonction des restrictions de groupe configurées.</p>
+ <p>(Utilisé uniquement lorsque le \'Type de réponse\' est \'Rediriger vers une URL externe\'.)</p>';
+ $string['flagmessage'] = 'Response message';
+ $string['flagmessage_help'] = '
+ <p>Le message à afficher lorsqu\'un utilisateur n\'est pas autorisé à accéder à Moodle en fonction des restrictions de groupe configurées.</p>
+ <p>(Affiché uniquement lorsque le \'Type de réponse\' est \'Afficher un message personnalisé\'.)</p>';
+ $string['flagmessage_default'] = 'Vous êtes connecté à votre fournisseur d\'identité, cependant, ce compte a un accès limité à Moodle, veuillez contacter votre administrateur pour plus de détails.';
+ $string['flagresponsetype'] = 'Account blocking response type';
+ $string['flagresponsetype_help'] = 'Si l\'accès est bloqué en fonction des restrictions de groupe configurées, comment Moodle doit-il répondre ?';
+ $string['idpattr_help'] = 'Quel attribut IdP doit être comparé à un champ utilisateur Moodle ?';
+ $string['idpattr'] = 'Mapping IdP';
+ $string['idpmetadata_badurl'] = 'Invalid metadata at {$a}';
+ $string['idpmetadata_help'] = 'Pour utiliser plusieurs IdP, entrez chaque URL de métadonnées publiques sur une nouvelle ligne.<br/>Pour remplacer un nom, placez le texte avant le http. par exemple, "Nom IdP forcé http://ssp.local/simplesaml/iomadsaml2/idp/metadata.php"';
+$string['idpmetadata'] = 'XML de métadonnées IdP OU URL XML publique';
+$string['idpmetadata_invalid'] = 'Le XML IdP n\'est pas valide';
+$string['idpmetadata_noentityid'] = 'Le XML IdP n\'a pas d\'entityID';
+$string['idpmetadatarefresh_help'] = 'Exécuter une tâche planifiée pour mettre à jour les métadonnées IdP à partir de l\'URL des métadonnées IdP';
+$string['idpmetadatarefresh'] = 'Actualisation des métadonnées IdP';
+$string['idpnamedefault'] = 'Connexion via IOMAD SAML2';
+$string['idpnamedefault_varaible'] = 'Connexion via IOMAD SAML2 ({$a})';
+$string['idpname_help'] = 'par exemple, myUNI - ceci est détecté à partir des métadonnées et sera affiché sur la page de connexion double (si activé)';
+$string['idpname'] = 'Remplacement de l\'étiquette IdP';
+$string['localityname'] = 'Localité';
 $string['logdirdefault'] = '/tmp/';
-$string['logdir_help'] = 'The log directory SSPHP will write to, the file will be named simplesamlphp.log';
-$string['logdir'] = 'Log Directory';
-$string['logtofile'] = 'Enable logging to file';
-$string['logtofile_help'] = 'Turning this on will redirect SSPHP log output to a file in the logdir';
-$string['manageidpsheading'] = 'Manage available Identity Providers (IdPs)';
-$string['mdlattr_help'] = 'Which Moodle user field should the IdP attribute be matched to?';
-$string['mdlattr'] = 'Mapping Moodle';
-$string['wantassertionssigned'] = 'Want assertions signed';
-$string['wantassertionssigned_help'] = 'Whether assertions received by this SP must be signed';
-$string['assertionsconsumerservices'] = 'Assertions consumer services';
-$string['assertionsconsumerservices_help'] = 'List of bindings the SP should support';
-$string['spentityid'] = 'Entity ID';
-$string['spentityid_help'] = 'Override the Entity Id of the Service Provider. In most cases leave blank and a good default will be used instead.';
-$string['allowcreate'] = 'Allow create';
-$string['allowcreate_help'] = 'Allow creation of IdP users on demand';
+$string['logdir_help'] = 'Le répertoire de journalisation où SSPHP écrira, le fichier sera nommé simplesamlphp.log';
+$string['logdir'] = 'Répertoire de journalisation';
+$string['logtofile'] = 'Activer la journalisation dans un fichier';
+$string['logtofile_help'] = 'Activer cette option redirigera la sortie du journal SSPHP vers un fichier dans le répertoire de journalisation';
+$string['manageidpsheading'] = 'Gérer les fournisseurs d\'identité disponibles (IdP)';
+$string['mdlattr_help'] = 'Quel champ utilisateur Moodle doit être comparé à l\'attribut IdP ?';
+$string['mdlattr'] = 'Mappage Moodle';
+$string['wantassertionssigned'] = 'Vouloir des assertions signées';
+$string['wantassertionssigned_help'] = 'Si les assertions reçues par ce SP doivent être signées';
+$string['assertionsconsumerservices'] = 'Services consommateurs d\'assertions';
+$string['assertionsconsumerservices_help'] = 'Liste des liaisons que le SP doit prendre en charge';
+$string['spentityid'] = 'ID d\'entité';
+$string['spentityid_help'] = 'Remplacer l\'ID d\'entité du fournisseur de services. Dans la plupart des cas, laissez vide et une bonne valeur par défaut sera utilisée à la place.';
+$string['allowcreate'] = 'Autoriser la création';
+$string['allowcreate_help'] = 'Autoriser la création d\'utilisateurs IdP à la demande';
 $string['authncontext'] = 'AuthnContext';
-$string['authncontext_help'] = 'Allows augmentation of assertions. Leave blank unless required';
-$string['metadatafetchfailed'] = 'Metadata fetch failed: {$a}';
-$string['metadatafetchfailedstatus'] = 'Metadata fetch failed: Status code {$a}';
-$string['metadatafetchfailedunknown'] = 'Metadata fetch failed: Unknown cURL error';
-$string['multiidp:label:displayname'] = 'Display name';
+$string['authncontext_help'] = 'Permet l\'augmentation des assertions. Laissez vide sauf si nécessaire';
+$string['metadatafetchfailed'] = 'Échec de la récupération des métadonnées : {$a}';
+$string['metadatafetchfailedstatus'] = 'Échec de la récupération des métadonnées : Code d\'état {$a}';
+$string['metadatafetchfailedunknown'] = 'Échec de la récupération des métadonnées : Erreur cURL inconnue';
+$string['multiidp:label:displayname'] = 'Nom affiché';
 $string['multiidp:label:alias'] = 'Alias';
-$string['multiidp:label:active'] = 'Active';
-$string['multiidp:label:defaultidp'] = 'Default IdP';
-$string['multiidp:label:admin'] = 'For admin users only';
-$string['multiidp:label:admin_help'] = 'Any users that log in using this IdP will automatically be made an site administrator';
-$string['multiidp:label:whitelist'] = 'Redirected IP addresses';
-$string['multiidp:label:whitelist_help'] = 'If set, it will force clients to this IdP. Format: xxx.xxx.xxx.xxx/bitmask. Separate multiple subnets on a new line.';
+$string['multiidp:label:active'] = 'Actif';
+$string['multiidp:label:defaultidp'] = 'IdP par défaut';
+$string['multiidp:label:admin'] = 'Pour les utilisateurs administrateurs uniquement';
+$string['multiidp:label:admin_help'] = 'Tous les utilisateurs qui se connectent en utilisant cet IdP seront automatiquement nommés administrateurs du site';
+$string['multiidp:label:whitelist'] = 'Adresses IP redirigées';
+$string['multiidp:label:whitelist_help'] = 'Si défini, cela forcera les clients à utiliser cet IdP. Format : xxx.xxx.xxx.xxx/bitmask. Séparez plusieurs sous-réseaux sur une nouvelle ligne.';
 $string['multiidpinfo'] = '
 <ul>
-<li>An IdP can only be used if it is set as Active</li>
-<li>When duallogin has been turned on all active IdPs will be displayed on the login page</li>
-<li>When an IdP has been set as Default and duallogin is not turned on, this IdP will automatically be used unless ?multiidp=on or saml=off is passed on /login/index.php</li>
-<li>An IdP can be given an Alias, when going to /login/index.php?idpalias={alias} the alias can be passed to directly use that IdP</li>
+<li>Un IdP ne peut être utilisé que s\'il est défini comme actif</li>
+<li>Lorsque la connexion double est activée, tous les IdP actifs seront affichés sur la page de connexion</li>
+<li>Lorsqu\'un IdP est défini comme par défaut et que la connexion double n\'est pas activée, cet IdP sera automatiquement utilisé sauf si ?multiidp=on ou saml=off est passé sur /login/index.php</li>
+<li>Un IdP peut recevoir un alias, en accédant à /login/index.php?idpalias={alias}, l\'alias peut être utilisé directement pour cet IdP</li>
 </ul>';
-$string['multiidpbuttons'] = 'Buttons with icons';
-$string['multiidpdisplay'] = 'Multiple IdP display type';
-$string['multiidpdisplay_help'] = 'If an IdP metadata xml contains multiple IdP entities, how will each available IdP be displayed?';
-$string['multiidpdropdown'] = 'Drop-down list';
-$string['nameidasattrib'] = 'Expose NameID as attribute';
-$string['nameidasattrib_help'] = 'The NameID claim will be exposed to SSPHP as an attribute named nameid';
-$string['noattribute'] = 'You have logged in successfully but we could not find your \'{$a}\' attribute to associate you to an account in Moodle.';
-$string['noidpfound'] = 'The IdP \'{$a}\' was not found as a configured IdP.';
-$string['nouser'] = 'You have logged in successfully as \'{$a}\' but do not have an account in Moodle.';
-$string['nullprivatecert'] = 'Creation of Private Certificate failed.';
-$string['nullpubliccert'] = 'Creation of Public Certificate failed.';
-$string['organizationalunitname'] = 'Organisational Unit';
+$string['multiidpbuttons'] = 'Boutons avec icônes';
+$string['multiidpdisplay'] = 'Type d\'affichage multiple IdP';
+$string['multiidpdisplay_help'] = 'Si un fichier XML de métadonnées IdP contient plusieurs entités IdP, comment chaque IdP disponible sera-t-il affiché ?';
+$string['multiidpdropdown'] = 'Liste déroulante';
+$string['nameidasattrib'] = 'Exposer NameID en tant qu\'attribut';
+$string['nameidasattrib_help'] = 'La revendication NameID sera exposée à SSPHP en tant qu\'attribut nommé nameid';
+$string['noattribute'] = 'Vous vous êtes connecté avec succès mais nous n\'avons pas trouvé votre attribut \'{$a}\' pour vous associer à un compte dans Moodle.';
+$string['noidpfound'] = 'L\'IdP \'{$a}\' n\'a pas été trouvé comme IdP configuré.';
+$string['nouser'] = 'Vous vous êtes connecté avec succès en tant que \'{$a}\' mais vous n\'avez pas de compte dans Moodle.';
+$string['nullprivatecert'] = 'Échec de la création du certificat privé.';
+$string['nullpubliccert'] = 'Échec de la création du certificat public.';
+$string['organizationalunitname'] = 'Unité organisationnelle';
 $string['organizationname'] = 'Organisation';
-$string['passivemode'] = 'Passive mode';
-$string['plugindisabled'] = 'IOMAD SAML2 authentication plugin is disabled';
+$string['passivemode'] = 'Mode passif';
+$string['plugindisabled'] = 'Le plugin d\'authentification IOMAD SAML2 est désactivé';
 $string['pluginname'] = 'IOMAD SAML2';
-$string['privatekeypass'] = 'Private certificate key password';
-$string['privatekeypass_help'] = 'This is used for signing the local Moodle certificate, changing this will invalidate the current certificate.';
-$string['regenerateheading'] = 'Regenerate Private Key and Certificate';
-$string['regenerate_submit'] = 'Regenerate';
-$string['requestedattributes'] = 'Requested attributes';
-$string['requestedattributes_help'] = 'Some IdP\'s need the SP to declare which attributes will be requested or are required. Add each attribute on a new line and these will be present in the SP metadata under the <code>AttributeConsumingService</code> tag. If you want a field to be required put a space and then * after that line. {$a->example}';
-$string['rememberidp'] = 'Remember login service';
-$string['required'] = 'This field is required';
-$string['requireint'] = 'This field is required and needs to be a positive integer';
-$string['showidplink'] = 'Display IdP link';
-$string['showidplink_help'] = 'This will display the IdP link when the site is configured.';
-$string['source'] = 'Source: {$a}';
-$string['spmetadata_help'] = '<a href=\'{$a}\'>View Service Provider Metadata</a> | <a href=\'{$a}?download=1\'>Download SP Metadata</a>
-<p>You may need to give this to the IdP admin to whitelist you.</p>';
-$string['spmetadatasign_help'] = 'Sign the SP Metadata.';
-$string['spmetadatasign'] = 'SP Metadata signature';
-$string['spmetadata'] = 'SP Metadata';
-$string['sspversion'] = 'SimpleSAMLphp version';
-$string['stateorprovincename'] = 'State or Province';
-$string['status'] = 'Status';
-$string['suspendeduser'] = 'You have logged in successfully as \'{$a}\' but your account has been suspended in Moodle.';
-$string['taskmetadatarefresh'] = 'Metadata refresh task';
-$string['test_auth_button_login'] = 'IdP Login';
-$string['test_auth_button_logout'] = 'IdP Logout';
-$string['test_auth_str'] = 'Test isAuthenticated and login';
-$string['test_endpoint'] = 'Connection test URL';
-$string['test_endpoint_desc'] = 'Enter a URL to test connection against for IdP redirection from the client browser. Some users or networks may not have connectivity to the IdP based on account or network permissions.';
-$string['test_idp_conn'] = 'Test IdP connection';
-$string['test_noticetestrequirements'] = 'In order to use this test, plugin needs to be configured, enabled and debugging mode should be enabled in plugin settings.';
-$string['test_passive_str'] = 'Test using isPassive';
-$string['testdebuggingdisabled'] = 'To use this testing page SAML debugging must be on';
-$string['tolower'] = 'Case matching';
+$string['privatekeypass'] = 'Mot de passe de la clé du certificat privé';
+$string['privatekeypass_help'] = 'Cela est utilisé pour signer le certificat local Moodle, changer cela invalidera le certificat actuel.';
+$string['regenerateheading'] = 'Régénérer la clé privée et le certificat';
+$string['regenerate_submit'] = 'Régénérer';
+$string['requestedattributes'] = 'Attributs demandés';
+$string['requestedattributes_help'] = 'Certains IdP nécessitent que le SP déclare quels attributs seront demandés ou sont requis. Ajoutez chaque attribut sur une nouvelle ligne et ceux-ci seront présents dans les métadonnées SP sous la balise <code>AttributeConsumingService</code>. Si vous voulez qu\'un champ soit requis, mettez un espace puis * après cette ligne. {$a->example}';
+$string['rememberidp'] = 'Se souvenir du service de connexion';
+$string['required'] = 'Ce champ est requis';
+$string['requireint'] = 'Ce champ est requis et doit être un entier positif';
+$string['showidplink'] = 'Afficher le lien IdP';
+$string['showidplink_help'] = 'Cela affichera le lien IdP lorsque le site est configuré.';
+$string['source'] = 'Source : {$a}';
+$string['spmetadata_help'] = '<a href=\'{$a}\'>Voir les métadonnées du fournisseur de services</a> | <a href=\'{$a}?download=1\'>Télécharger les métadonnées SP</a>
+<p>Vous devrez peut-être donner cela à l\'administrateur IdP pour vous mettre sur liste blanche.</p>';
+$string['spmetadatasign_help'] = 'Signer les métadonnées SP.';
+$string['spmetadatasign'] = 'Signature des métadonnées SP';
+$string['spmetadata'] = 'Métadonnées SP';
+$string['sspversion'] = 'Version SimpleSAMLphp';
+$string['stateorprovincename'] = 'État ou province';
+$string['status'] = 'Statut';
+$string['suspendeduser'] = 'Vous vous êtes connecté avec succès en tant que \'{$a}\' mais votre compte a été suspendu dans Moodle.';
+$string['taskmetadatarefresh'] = 'Tâche d\'actualisation des métadonnées';
+$string['test_auth_button_login'] = 'Connexion IdP';
+$string['test_auth_button_logout'] = 'Déconnexion IdP';
+$string['test_auth_str'] = 'Tester isAuthenticated et connexion';
+$string['test_endpoint'] = 'URL de test de connexion';
+$string['test_endpoint_desc'] = 'Entrez une URL pour tester la connexion pour la redirection IdP depuis le navigateur client. Certains utilisateurs ou réseaux peuvent ne pas avoir de connectivité à l\'IdP en fonction des autorisations de compte ou de réseau.';
+$string['test_idp_conn'] = 'Tester la connexion IdP';
+$string['test_noticetestrequirements'] = 'Pour utiliser ce test, le plugin doit être configuré, activé et le mode de débogage doit être activé dans les paramètres du plugin.';
+$string['test_passive_str'] = 'Tester en utilisant isPassive';
+$string['testdebuggingdisabled'] = 'Pour utiliser cette page de test, le débogage SAML doit être activé';
+$string['tolower'] = 'Correspondance de casse';
 $string['tolower:exact'] = 'Exact';
-$string['tolower:lowercase'] = 'Lower case';
-$string['tolower:caseandaccentinsensitive'] = 'Case and accent insensitive';
-$string['tolower:caseinsensitive'] = 'Case insensitive';
+$string['tolower:lowercase'] = 'Minuscule';
+$string['tolower:caseandaccentinsensitive'] = 'Insensible à la casse et aux accents';
+$string['tolower:caseinsensitive'] = 'Insensible à la casse';
 $string['tolower_help'] = '
-<p>Exact: match is case sensitive (default).</p>
-<p>Lower case: applies lower case to the IdP attribute before matching.</p>
-<p>Case insensitive: ignore case when matching.</p>';
-$string['wrongauth'] = 'You have logged in successfully as \'{$a}\' but are not authorized to access Moodle.';
-$string['auth_data_mapping'] = 'Data mapping';
-$string['auth_fieldlockfield'] = 'Lock value ({$a})';
-$string['auth_fieldmapping'] = 'Data mapping ({$a})';
-$string['auth_fieldlock_expl'] = '<p><b>Lock value:</b> If enabled, will prevent Moodle users and admins from editing the field directly. Use this option if you are maintaining this data in the external auth system. </p>';
-$string['auth_fieldlocks'] = 'Lock user fields';
-$string['auth_updatelocalfield'] = 'Update local ({$a})';
-$string['auth_updateremotefield'] = 'Update external ({$a})';
-$string['cannotmapfield'] = 'Mapping collision detected - two fields maps to the same grade item {$a}';
-$string['locked'] = 'Locked';
-$string['unlocked'] = 'Unlocked';
-$string['unlockedifempty'] = 'Unlocked if empty';
-$string['update_never'] = 'Never';
-$string['update_oncreate'] = 'On creation';
-$string['update_onlogin'] = 'On every login';
-$string['update_onupdate'] = 'On update';
-$string['phone1'] = 'Phone';
-$string['phone2'] = 'Mobile phone';
-$string['nameidpolicy'] = 'NameID Policy';
+<p>Exact : la correspondance est sensible à la casse (par défaut).</p>
+<p>Minuscule : applique la minuscule à l\'attribut IdP avant la correspondance.</p>
+<p>Insensible à la casse : ignore la casse lors de la correspondance.</p>';
+$string['wrongauth'] = 'Vous vous êtes connecté avec succès en tant que \'{$a}\' mais vous n\'êtes pas autorisé à accéder à Moodle.';
+$string['auth_data_mapping'] = 'Mappage des données';
+$string['auth_fieldlockfield'] = 'Verrouiller la valeur ({$a})';
+$string['auth_fieldmapping'] = 'Mappage des données ({$a})';
+$string['auth_fieldlock_expl'] = '<p><b>Verrouiller la valeur :</b> Si activé, empêchera les utilisateurs et les administrateurs Moodle de modifier directement le champ. Utilisez cette option si vous maintenez ces données dans le système d\'authentification externe. </p>';
+$string['auth_fieldlocks'] = 'Verrouiller les champs utilisateur';
+$string['auth_updatelocalfield'] = 'Mettre à jour localement ({$a})';
+$string['auth_updateremotefield'] = 'Mettre à jour à distance ({$a})';
+$string['cannotmapfield'] = 'Collision de mappage détectée - deux champs mappent au même élément de note {$a}';
+$string['locked'] = 'Verrouillé';
+$string['unlocked'] = 'Déverrouillé';
+$string['unlockedifempty'] = 'Déverrouillé si vide';
+$string['update_never'] = 'Jamais';
+$string['update_oncreate'] = 'À la création';
+$string['update_onlogin'] = 'À chaque connexion';
+$string['update_onupdate'] = 'À la mise à jour';
+$string['phone1'] = 'Téléphone';
+$string['phone2'] = 'Téléphone mobile';
+$string['nameidpolicy'] = 'Politique NameID';
 $string['nameidpolicy_help'] = '';
-$string['grouprules'] = 'Group rules';
-$string['grouprules_help'] = '<p>A list of rules to be able to control access based on the group attribute value.</p>
-<p>Each line should have one rule in format: {allow or deny} {groups attribute}={value}.</p>
-<p>Higher in the list rule will be applied first.</p>
-Example: <br/>
-allow admins=yes<br>
-deny admins=no<br>
-allow examrole=proctor<br>
-deny library=overdue<br>';
+$string['grouprules'] = 'Règles de groupe';
+$string['grouprules_help'] = '<p>Une liste de règles pour pouvoir contrôler l\'accès en fonction de la valeur de l\'attribut de groupe.</p>
+<p>Chaque ligne doit avoir une règle au format : {autoriser ou refuser} {attributs de groupe}={valeur}.</p>
+<p>La règle la plus haute dans la liste sera appliquée en premier.</p>
+Exemple : <br/>
+autoriser admins=oui<br>
+refuser admins=non<br>
+autoriser examrole=proctor<br>
+refuser library=overdue<br>';
 /*
  * Privacy provider (GDPR)
  */
-$string["privacy:no_data_reason"] = "The IOMAD Saml2 authentication plugin does not store any personal data.";
+$string["privacy:no_data_reason"] = "Le plugin d\'authentification IOMAD Saml2 ne stocke aucune donnée personnelle.";
 
 /*
  * Signing Algorithm
  */
-$string['sha1'] = 'Legacy SHA1 (Dangerous)';
+$string['sha1'] = 'SHA1 hérité (dangereux)';
 $string['sha256'] = 'SHA256';
 $string['sha384'] = 'SHA384';
 $string['sha512'] = 'SHA512';
-$string['signaturealgorithm'] = 'Signing Algorithm';
-$string['signaturealgorithm_help'] = 'This is the algorithm that will be used to sign SAML requests. Warning: The SHA1 Algorithm is only provided for backwards compatibility, unless you absolutely must use it it is recommended to avoid it and use at least SHA256 instead.';
-$string['selectloginservice'] = 'Select a login service';
-$string['regenerateheader'] = 'Regenerate Private Key and Certificate';
-$string['regeneratewarning'] = 'Warning! Generating a new certificate will overwrite the current one and you may need to update your IDP';
-$string['regeneratepath'] = 'Certificate path path: {$a}';
-$string['regenerateheader'] = 'Regenerate Private Key and Certificate';
-$string['regeneratesuccess'] = 'Private Key and Certificate successfully regenerated';
+$string['signaturealgorithm'] = 'Algorithme de signature';
+$string['signaturealgorithm_help'] = 'C\'est l\'algorithme qui sera utilisé pour signer les demandes SAML. Avertissement : L\'algorithme SHA1 n\'est fourni que pour des raisons de compatibilité, sauf si vous devez absolument l\'utiliser, il est recommandé de l\'éviter et d\'utiliser au moins SHA256 à la place.';
+$string['selectloginservice'] = 'Sélectionnez un service de connexion';
+$string['regenerateheader'] = 'Régénérer la clé privée et le certificat';
+$string['regeneratewarning'] = 'Attention ! Générer un nouveau certificat écrasera l\'actuel et vous devrez peut-être mettre à jour votre IDP';
+$string['regeneratepath'] = 'Chemin du certificat : {$a}';
+$string['regenerateheader'] = 'Régénérer la clé privée et le certificat';
+$string['regeneratesuccess'] = 'Clé privée et certificat régénérés avec succès';

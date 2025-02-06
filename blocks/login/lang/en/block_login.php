@@ -22,6 +22,6 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['login:addinstance'] = 'Add a new login block';
-$string['pluginname'] = 'Login';
-$string['privacy:metadata'] = 'The Login block only provides a way to log in and does not store any data itself.';
+$string['login:addinstance'] = 'Ajouter un nouveau bloc de connexion';
+$string['pluginname'] = 'Connexion';
+$string['privacy:metadata'] = 'Le bloc de connexion ne fournit qu\'un moyen de se connecter et ne stocke aucune donnée lui-même.';

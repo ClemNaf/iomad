@@ -22,7 +22,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['globalsearch:addinstance'] = 'Add a new global search block';
-$string['globalsearch:myaddinstance'] = 'Add a new global search block to Dashboard';
-$string['pluginname'] = 'Global search';
-$string['privacy:metadata'] = 'The Global search block only shows data stored in other locations.';
+$string['globalsearch:addinstance'] = 'Ajouter un nouveau bloc de recherche globale';
+$string['globalsearch:myaddinstance'] = 'Ajouter un nouveau bloc de recherche globale au tableau de bord';
+$string['pluginname'] = 'Recherche globale';
+$string['privacy:metadata'] = 'Le bloc de recherche globale ne montre que des données stockées ailleurs.';

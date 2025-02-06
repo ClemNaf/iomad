@@ -22,15 +22,15 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['allowadditionalcssclasses'] = 'Allow additional CSS classes';
-$string['configallowadditionalcssclasses'] = 'Adds a configuration option to Text block instances allowing additional CSS classes to be set.';
-$string['configclasses'] = 'Additional CSS classes';
-$string['configclasses_help'] = 'The purpose of this configuration is to aid with theming by helping distinguish text blocks from each other. Any CSS classes entered here (space delimited) will be appended to the block\'s default classes.';
-$string['configcontent'] = 'Content';
-$string['configtitle'] = 'Text block title';
-$string['html:addinstance'] = 'Add a new text block';
-$string['html:myaddinstance'] = 'Add a new text block to Dashboard';
-$string['newhtmlblock'] = '(new text block)';
-$string['pluginname'] = 'Text';
-$string['search:content'] = 'Text block content';
-$string['privacy:metadata:block'] = 'The Text block stores all of its data within the block subsystem.';
+$string['allowadditionalcssclasses'] = 'Autoriser des classes CSS supplémentaires';
+$string['configallowadditionalcssclasses'] = 'Ajoute une option de configuration aux instances de blocs de texte permettant de définir des classes CSS supplémentaires.';
+$string['configclasses'] = 'Classes CSS supplémentaires';
+$string['configclasses_help'] = 'Le but de cette configuration est d\'aider à la personnalisation en aidant à distinguer les blocs de texte les uns des autres. Toutes les classes CSS saisies ici (séparées par des espaces) seront ajoutées aux classes par défaut du bloc.';
+$string['configcontent'] = 'Contenu';
+$string['configtitle'] = 'Titre du bloc de texte';
+$string['html:addinstance'] = 'Ajouter un nouveau bloc de texte';
+$string['html:myaddinstance'] = 'Ajouter un nouveau bloc de texte au tableau de bord';
+$string['newhtmlblock'] = '(nouveau bloc de texte)';
+$string['pluginname'] = 'Texte';
+$string['search:content'] = 'Contenu du bloc de texte';
+$string['privacy:metadata:block'] = 'Le bloc de texte stocke toutes ses données dans le sous-système de blocs.';

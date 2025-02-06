@@ -22,8 +22,8 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['calendar_upcoming:addinstance'] = 'Add a new upcoming events block';
-$string['calendar_upcoming:myaddinstance'] = 'Add a new upcoming events block to Dashboard';
-$string['gotocalendar'] = 'Go to calendar...';
-$string['pluginname'] = 'Upcoming events';
-$string['privacy:metadata'] = 'The Upcoming events block only displays existing calendar data.';
+$string['calendar_upcoming:addinstance'] = 'Ajouter un nouveau bloc d\'événements à venir';
+$string['calendar_upcoming:myaddinstance'] = 'Ajouter un nouveau bloc d\'événements à venir au tableau de bord';
+$string['gotocalendar'] = 'Aller au calendrier...';
+$string['pluginname'] = 'Événements à venir';
+$string['privacy:metadata'] = 'Le bloc Événements à venir ne montre que des données de calendrier existantes.';

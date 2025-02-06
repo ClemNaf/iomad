@@ -26,20 +26,20 @@
  * Strings for component 'local_template_selector', language 'en'
  */
 
-$string['templateselectortoomany'] = 'template_selector got more than one selected template, even though multi-select is false';
-$string['cannotcallusgetselectedtemplate'] = 'You cannot call template_selector::get_selected_template if multi-select is true';
-$string['clear'] = 'Clear';
-$string['searchoptions'] = 'Search options';
-$string['templateselectorpreserveselected'] = 'Keep selected templates, even if they no longer match the search';
-$string['templateselectorautoselectunique'] = 'If only one template matches the search, select it automatically';
-$string['templateselectorsearchanywhere'] = 'Match the search text anywhere in the template\'s name';
-$string['toomanytemplatesmatchsearch'] = 'Too many templates ({$a->count}) match \'{$a->search}\'';
-$string['pleasesearchmore'] = 'Please search some more';
-$string['toomanytemplatestoshow'] = 'Too many templates ({$a}) to show';
-$string['pleaseusesearch'] = 'Please use the search';
-$string['nomatchingtemplates'] = 'No templates match \'{$a}\'';
-$string['none'] = 'None';
-$string['pluginname'] = 'Template Selectors';
-$string['previouslyselectedtemplates'] = 'Previously selected templates not matching \'{$a}\'';
-$string['privacy:metadata'] = 'The \'Local IOMAD Template selectors\' plugin only shows data stored in other locations.';
-$string['search'] = 'Search';
+$string['templateselectortoomany'] = 'template_selector a obtenu plus d\'un modèle sélectionné, même si multi-sélection est faux';
+$string['cannotcallusgetselectedtemplate'] = 'Vous ne pouvez pas appeler template_selector::get_selected_template si multi-sélection est vrai';
+$string['clear'] = 'Effacer';
+$string['searchoptions'] = 'Options de recherche';
+$string['templateselectorpreserveselected'] = 'Conserver les modèles sélectionnés, même s\'ils ne correspondent plus à la recherche';
+$string['templateselectorautoselectunique'] = 'Si un seul modèle correspond à la recherche, le sélectionner automatiquement';
+$string['templateselectorsearchanywhere'] = 'Correspondre au texte de recherche n\'importe où dans le nom du modèle';
+$string['toomanytemplatesmatchsearch'] = 'Trop de modèles ({$a->count}) correspondent à \'{$a->search}\'';
+$string['pleasesearchmore'] = 'Veuillez rechercher un peu plus';
+$string['toomanytemplatestoshow'] = 'Trop de modèles ({$a}) à afficher';
+$string['pleaseusesearch'] = 'Veuillez utiliser la recherche';
+$string['nomatchingtemplates'] = 'Aucun modèle ne correspond à \'{$a}\'';
+$string['none'] = 'Aucun';
+$string['pluginname'] = 'Sélecteurs de modèles locaux';
+$string['previouslyselectedtemplates'] = 'Modèles précédemment sélectionnés ne correspondant pas à \'{$a}\'';
+$string['privacy:metadata'] = 'Le plugin \'Sélecteurs de modèles locaux IOMAD\' ne montre que les données stockées dans d\'autres emplacements.';
+$string['search'] = 'Chercher';

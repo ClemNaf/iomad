@@ -23,15 +23,17 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['allowadditionalcssclasses'] = 'Allow additional CSS classes';
-$string['configallowadditionalcssclasses'] = 'Adds a configuration option to HTML block instances allowing additional CSS classes to be set.';
-$string['configclasses'] = 'Additional CSS classes';
-$string['configclasses_help'] = 'The purpose of this configuration is to aid with theming by helping distinguish HTML blocks from each other. Any CSS classes entered here (space delimited) will be appended to the block\'s default classes.';
-$string['configcontent'] = 'Content';
-$string['configtitle'] = 'Block title';
-$string['iomad_html:addinstance'] = 'Add a new Company HTML block';
-$string['iomad_html:myaddinstance'] = 'Add a new Company HTML block to Dashboard';
-$string['leaveblanktohide'] = 'leave blank to hide the title';
-$string['newiomad_htmlblock'] = '(new Company HTML block)';
+// French
+$string['allowadditionalcssclasses'] = 'Autoriser des classes CSS supplémentaires';
+$string['configallowadditionalcssclasses'] = 'Ajoute une option de configuration aux instances de blocs HTML permettant de définir des classes CSS supplémentaires.';
+$string['configclasses'] = 'Classes CSS supplémentaires';
+$string['configclasses_help'] = 'Le but de cette configuration est d\'aider à la personnalisation en aidant à distinguer les blocs HTML les uns des autres. Toutes les classes CSS saisies ici (séparées par des espaces) seront ajoutées aux classes par défaut du bloc.';
+$string['configcontent'] = 'Contenu';
+$string['configtitle'] = 'Titre du bloc';
+$string['iomad_html:addinstance'] = 'Ajouter un nouveau bloc HTML de la société';
+$string['iomad_html:myaddinstance'] = 'Ajouter un nouveau bloc HTML de la société au tableau de bord';
+$string['leaveblanktohide'] = 'laisser vide pour masquer le titre';
+$string['newiomad_htmlblock'] = '(nouveau bloc HTML de la société)';
 $string['pluginname'] = 'IOMAD HTML';
-$string['privacy:metadata'] = 'The IOMAD HTML block only shows data stored in other locations.';
+$string['privacy:metadata'] = 'Le bloc HTML IOMAD ne montre que des données stockées à d\'autres endroits.';
+

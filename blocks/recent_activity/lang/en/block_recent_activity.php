@@ -23,16 +23,15 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['cleanuptask'] = 'Cleanup task for recent activity block';
-$string['pluginname'] = 'Recent activity';
-$string['privacy:metadata'] = 'The recent activity block contains a cache of data stored elsewhere in Moodle.';
-$string['privacy:metadata:block_recent_activity'] = 'Temporary log of recent teacher activity. Removed after two days';
-$string['privacy:metadata:block_recent_activity:action'] = 'Action: created, updated or deleted';
-$string['privacy:metadata:block_recent_activity:cmid'] = 'Course activity ID';
-$string['privacy:metadata:block_recent_activity:courseid'] = 'Course ID';
-$string['privacy:metadata:block_recent_activity:modname'] = 'Module type name (for delete action)';
-$string['privacy:metadata:block_recent_activity:timecreated'] = 'Time when action was performed';
-$string['privacy:metadata:block_recent_activity:userid'] = 'User performing the action';
-$string['recent_activity:addinstance'] = 'Add a new recent activity block';
-$string['recent_activity:viewaddupdatemodule'] = 'View added and updated modules in recent activity block';
-$string['recent_activity:viewdeletemodule'] = 'View deleted modules in recent activity block';
+$string['cleanuptask'] = 'Tâche de nettoyage pour le bloc d\'activité récente';
+$string['pluginname'] = 'Activité récente';
+$string['privacy:metadata'] = 'Le bloc d\'activité récente contient un cache de données stockées ailleurs dans Moodle.';
+$string['privacy:metadata:block_recent_activity'] = 'Journal temporaire des activités récentes des enseignants. Supprimé après deux jours';
+$string['privacy:metadata:block_recent_activity:action'] = 'Action : créée, mise à jour ou supprimée';
+$string['privacy:metadata:block_recent_activity:cmid'] = 'ID de l\'activité du cours';
+$string['privacy:metadata:block_recent_activity:courseid'] = 'ID du cours';
+$string['privacy:metadata:block_recent_activity:modname'] = 'Nom du type de module (pour l\'action de suppression)';
+$string['privacy:metadata:block_recent_activity:timecreated'] = 'Heure à laquelle l\'action a été effectuée';
+$string['privacy:metadata:block_recent_activity:userid'] = 'Utilisateur effectuant l\'action';
+$string['recent_activity:addinstance'] = 'Ajouter un nouveau bloc d\'activité récente';
+$string['recent_activity:viewaddupdatemodule'] = 'Voir les modules ajoutés et mis à jour dans le bloc d\'activité récente';

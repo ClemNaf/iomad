@@ -23,9 +23,9 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['blog_recent:addinstance'] = 'Add a new recent blog entries block';
-$string['norecentblogentries'] = 'No recent entries';
-$string['numentriestodisplay'] = 'Number of recent entries to display';
-$string['pluginname'] = 'Recent blog entries';
-$string['recentinterval'] = 'Interval of time considered "recent"';
-$string['privacy:metadata'] = 'The Recent blog entries block only shows data stored in other locations.';
+$string['blog_recent:addinstance'] = 'Ajouter un nouveau bloc d\'articles de blog récents';
+$string['norecentblogentries'] = 'Aucun article récent';
+$string['numentriestodisplay'] = 'Nombre d\'articles récents à afficher';
+$string['pluginname'] = 'Articles de blog récents';
+$string['recentinterval'] = 'Interval de temps considéré comme "récent"';
+$string['privacy:metadata'] = 'Le bloc d\'articles de blog récents ne montre que des données stockées ailleurs.';

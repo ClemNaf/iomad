@@ -22,7 +22,7 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['news_items:addinstance'] = 'Add a new latest announcements block';
-$string['news_items:myaddinstance'] = 'Add a new latest announcements block to Dashboard';
-$string['pluginname'] = 'Latest announcements';
-$string['privacy:metadata'] = 'The Latest announcements block only shows data stored in the forum and does not store data itself.';
+$string['news_items:addinstance'] = 'Ajourter un nouveau bloc de dernières annonces';
+$string['news_items:myaddinstance'] = 'Ajourter un nouveau bloc de dernières annonces au tableau de bord';
+$string['pluginname'] = 'Dernières annonces';
+$string['privacy:metadata'] = 'Le bloc de dernières annonces ne montre que des données stockées dans le forum et ne stocke pas de données lui-même.';

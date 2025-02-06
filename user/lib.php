@@ -916,20 +916,20 @@ function user_get_user_navigation_info($user, $page, $options = array()) {
         }
     }
 
-    if ($custommenucount > 0) {
-        // Only add a divider if we have customusermenuitems.
-        $divider = new stdClass();
-        $divider->itemtype = 'divider';
-        $returnobject->navitems[] = $divider;
-    }
+    // if ($custommenucount > 0) {
+    //     // Only add a divider if we have customusermenuitems.
+    //     $divider = new stdClass();
+    //     $divider->itemtype = 'divider';
+    //     $returnobject->navitems[] = $divider;
+    // }
 
     // Links: Preferences.
-    $preferences = new stdClass();
-    $preferences->itemtype = 'link';
-    $preferences->url = new moodle_url('/user/preferences.php');
-    $preferences->title = get_string('preferences');
-    $preferences->titleidentifier = 'preferences,moodle';
-    $returnobject->navitems[] = $preferences;
+    // $preferences = new stdClass();
+    // $preferences->itemtype = 'link';
+    // $preferences->url = new moodle_url('/user/preferences.php');
+    // $preferences->title = get_string('preferences');
+    // $preferences->titleidentifier = 'preferences,moodle';
+    // $returnobject->navitems[] = $preferences;
 
 
     if (is_role_switched($course->id)) {

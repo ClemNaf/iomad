@@ -21,25 +21,25 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['report_companies:view'] = 'View companies report';
-$string['childcompany'] = 'This is a child company. Parent is \'{$a}\'';
-$string['companies'] = 'Companies';
-$string['completed'] = 'Completed';
-$string['course'] = 'Course';
-$string['coursemanagers'] = 'Company managers';
-$string['courseusers'] = 'Company users';
-$string['departmentmanagers'] = 'Department managers';
-$string['iomad_companies:view'] = 'IOMAD companies report';
-$string['nomanagers'] = 'No managers specified for this company';
-$string['nousers'] = 'No users specified for this company';
-$string['overview'] = 'Overview';
-$string['pluginname'] = 'IOMAD company overview report';
-$string['privacy:metadata'] = 'The Local IOMAD company overview report only shows data stored in other locations.';
-$string['totalusercount'] = 'Total number of users: {$a}';
-$string['totalcoursecount'] = 'Total number of courses: {$a}';
-$string['courses'] = 'Company courses';
-$string['nocourses'] = 'No courses specified for this company';
-$string['completionreportlink'] = 'Completion information';
-$string['themeinfo'] = 'Company theme';
-$string['themedetails'] = 'Theme details: ';
-$string['notheme'] = 'No theme is defined';
+$string['report_companies:view'] = 'Voir le rapport des entreprises';
+$string['childcompany'] = 'Il s\'agit d\'une entreprise fille. Le parent est \'{$a}\'';
+$string['companies'] = 'Entreprises';
+$string['completed'] = 'Terminé';
+$string['course'] = 'Cours';
+$string['coursemanagers'] = 'Gestionnaires d\'entreprise';
+$string['courseusers'] = 'Utilisateurs de l\'entreprise';
+$string['departmentmanagers'] = 'Gestionnaires de département';
+$string['iomad_companies:view'] = 'Rapport des entreprises IOMAD';
+$string['nomanagers'] = 'Aucun gestionnaire spécifié pour cette entreprise';
+$string['nousers'] = 'Aucun utilisateur spécifié pour cette entreprise';
+$string['overview'] = 'Vue d\'ensemble';
+$string['pluginname'] = 'Rapport de vue d\'ensemble de l\'entreprise IOMAD';
+$string['privacy:metadata'] = 'Le rapport de vue d\'ensemble de l\'entreprise IOMAD ne montre que les données stockées dans d\'autres emplacements.';
+$string['totalusercount'] = 'Nombre total d\'utilisateurs: {$a}';
+$string['totalcoursecount'] = 'Nombre total de cours: {$a}';
+$string['courses'] = 'Cours d\'entreprise';
+$string['nocourses'] = 'Aucun cours spécifié pour cette entreprise';
+$string['completionreportlink'] = 'Informations de complétion';
+$string['themeinfo'] = 'Thème de l\'entreprise';
+$string['themedetails'] = 'Détails du thème: ';
+$string['notheme'] = 'Aucun thème n\'est défini';

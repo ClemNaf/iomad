@@ -22,11 +22,9 @@
  * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['explanation'] = 'Tool generates fake data for an IOMAD site. It can only be run by the administrator in Debugging mode. This 
-    is only for test sites. It will completely destroy an existing site.';
-$string['doit'] = 'Ok. Go ahead!';
-$string['makesite'] = 'Make IOMAD fake development site';
-$string['notdebugging'] = 'Developer debugging mode is required to run this tool';
-$string['pluginname'] = 'IOMAD development data generator';
-$string['privacy:metadata'] = 'The IOMAD site generator admin tool only shows data stored in other locations.';
-
+$string['explanation'] = 'L\'outil génère des données factices pour un site IOMAD. Il ne peut être exécuté que par l\'administrateur en mode de débogage. Ceci est uniquement pour les sites de test. Il détruira complètement un site existant.';
+$string['doit'] = 'D\'accord. Vas-y!';
+$string['makesite'] = 'Créer un faux site de développement IOMAD';
+$string['notdebugging'] = 'Le mode de débogage du développeur est requis pour exécuter cet outil';
+$string['pluginname'] = 'Générateur de données de développement IOMAD';
+$string['privacy:metadata'] = 'L\'outil d\'administration de génération de site IOMAD ne montre que les données stockées dans d\'autres emplacements.';

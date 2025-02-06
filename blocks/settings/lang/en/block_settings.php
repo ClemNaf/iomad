@@ -24,8 +24,8 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['enabledock'] = 'Allow the user to dock this block';
+$string['enabledock'] = 'Autoriser l\'utilisateur à accrocher ce bloc';
 $string['pluginname'] = 'Administration';
-$string['settings:addinstance'] = 'Add a new administration block';
-$string['settings:myaddinstance'] = 'Add a new administration block to Dashboard';
-$string['privacy:metadata'] = 'The Administration block only shows data stored in other locations.';
+$string['settings:addinstance'] = 'Ajouter un nouveau bloc d\'administration';
+$string['settings:myaddinstance'] = 'Ajouter un nouveau bloc d\'administration au tableau de bord';
+$string['privacy:metadata'] = 'Le bloc d\'administration ne montre que des données stockées ailleurs.';

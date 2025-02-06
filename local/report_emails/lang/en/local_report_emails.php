@@ -21,18 +21,18 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['report_emails:view'] = 'View the IOMAD email report';
-$string['report_emails:resend'] = 'Resend IOMAD emails';
-$string['pluginname'] = 'Outgoing Email Report';
-$string['privacy:metadata'] = 'The \'Local IOMAD email report\' only shows data stored in other locations.';
-$string['sender'] = 'Sender';
-$string['created'] = 'Date created';
-$string['due'] = 'Date due';
-$string['sent'] = 'Date sent';
-$string['controls'] = 'Controls';
-$string['resend'] = 'Resend';
-$string['resendemail'] = 'Resend email';
-$string['resendemailfull'] = 'Are you sure you want to re-process this email?';
-$string['resendall'] = 'Resend all';
-$string['resendallemails'] = 'Resend all emails';
-$string['resendallemailsfull'] = 'Are you sure you want to resend all of the emails in the current selection. This could result in many emails being sent out.'; 
+$string['report_emails:view'] = 'Voir le rapport des e-mails IOMAD';
+$string['report_emails:resend'] = 'Renvoyer les e-mails IOMAD';
+$string['pluginname'] = 'Rapport des e-mails sortants';
+$string['privacy:metadata'] = 'Le plugin \'Rapport des e-mails locaux IOMAD\' ne montre que les données stockées dans d\'autres emplacements.';
+$string['sender'] = 'Expéditeur';
+$string['created'] = 'Date de création';
+$string['due'] = 'Date d\'échéance';
+$string['sent'] = 'Date d\'envoi';
+$string['controls'] = 'Contrôles';
+$string['resend'] = 'Renvoyer';
+$string['resendemail'] = 'Renvoyer l\'e-mail';
+$string['resendemailfull'] = 'Êtes-vous sûr de vouloir retraiter cet e-mail?';
+$string['resendall'] = 'Renvoyer tout';
+$string['resendallemails'] = 'Renvoyer tous les e-mails';
+$string['resendallemailsfull'] = 'Êtes-vous sûr de vouloir renvoyer tous les e-mails de la sélection actuelle. Cela pourrait entraîner l\'envoi de nombreux e-mails.';

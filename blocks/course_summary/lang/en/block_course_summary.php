@@ -23,7 +23,7 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['coursesummary'] = 'Course summary';
-$string['course_summary:addinstance'] = 'Add a new course/site summary block';
-$string['pluginname'] = 'Course/site summary';
-$string['privacy:metadata'] = 'The Course/site summary block only shows information about courses and does not store data itself.';
+$string['coursesummary'] = 'Résumé du cours';
+$string['course_summary:addinstance'] = 'Ajouter un nouveau bloc de résumé de cours/site';
+$string['pluginname'] = 'Résumé du cours/site';
+$string['privacy:metadata'] = 'Le bloc de résumé de cours/site ne montre que des informations sur les cours et ne stocke pas de données en lui-même.';

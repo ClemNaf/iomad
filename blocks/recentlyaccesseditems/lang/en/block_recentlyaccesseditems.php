@@ -20,13 +20,13 @@
  * @copyright  2018 Victor Deniz <victor@moodle.com>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-$string['moreitems'] = 'Show more items';
-$string['noitems'] = 'No recent items';
-$string['pluginname'] = 'Recently accessed items';
-$string['privacy:metadata:cmid'] = 'The ID of the activity or resource';
-$string['privacy:metadata:courseid'] = 'Course the item belongs to';
-$string['privacy:metadata:block_recentlyaccesseditemstablesummary'] = 'The Recently accessed items block stores information about items that the user accessed recently';
-$string['privacy:metadata:timeaccess'] = 'The time when the user last accessed the item';
-$string['privacy:metadata:userid'] = 'The ID of the user who accessed the item';
-$string['privacy:recentlyaccesseditemspath'] = 'Recently accessed items';
-$string['recentlyaccesseditems:myaddinstance'] = 'Add a new recently accessed items block to Dashboard';
+$string['moreitems'] = 'Afficher plus d\'éléments';
+$string['noitems'] = 'Aucun élément récent';
+$string['pluginname'] = 'Éléments récemment consultés';
+$string['privacy:metadata:cmid'] = 'L\'ID de l\'activité ou de la ressource';
+$string['privacy:metadata:courseid'] = 'Cours auquel appartient l\'élément';
+$string['privacy:metadata:block_recentlyaccesseditemstablesummary'] = 'Le bloc Éléments récemment consultés stocke des informations sur les éléments auxquels l\'utilisateur a récemment accédé';
+$string['privacy:metadata:timeaccess'] = 'L\'heure à laquelle l\'utilisateur a accédé pour la dernière fois à l\'élément';
+$string['privacy:metadata:userid'] = 'L\'ID de l\'utilisateur qui a accédé à l\'élément';
+$string['privacy:recentlyaccesseditemspath'] = 'Éléments récemment consultés';
+$string['recentlyaccesseditems:myaddinstance'] = 'Ajouter un nouveau bloc d\'éléments récemment consultés au tableau de bord';

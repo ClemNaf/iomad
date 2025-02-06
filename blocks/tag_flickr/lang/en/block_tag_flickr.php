@@ -22,20 +22,20 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['configtitle'] = 'Flickr block title';
-$string['date-posted-asc'] = 'Date posted ASC';
-$string['date-posted-desc'] = 'Date posted DESC';
-$string['date-taken-asc'] = 'Date taken ASC';
-$string['date-taken-desc'] = 'Date taken DESC';
+$string['configtitle'] = 'Titre du bloc Flickr';
+$string['date-posted-asc'] = 'Date de publication ASC';
+$string['date-posted-desc'] = 'Date de publication DESC';
+$string['date-taken-asc'] = 'Date de prise de vue ASC';
+$string['date-taken-desc'] = 'Date de prise de vue DESC';
 $string['defaulttile'] = 'Flickr';
-$string['getfromphotoset'] = 'Get photos from photoset with id';
-$string['includerelatedtags'] = 'Include related tags in query';
-$string['interestingness-asc'] = 'Interestingness ASC';
-$string['interestingness-desc'] = 'Interestingness DESC';
-$string['numberofphotos'] = 'Number of photos';
+$string['getfromphotoset'] = 'Obtenir des photos du photoset avec l\'identifiant';
+$string['includerelatedtags'] = 'Inclure les tags associés dans la requête';
+$string['interestingness-asc'] = 'Intérêt ASC';
+$string['interestingness-desc'] = 'Intérêt DESC';
+$string['numberofphotos'] = 'Nombre de photos';
 $string['pluginname'] = 'Flickr';
-$string['relevance'] = 'Relevance';
-$string['sortby'] = 'Sort by';
-$string['tag_flickr:addinstance'] = 'Add a new flickr block';
-$string['privacy:metadata:block_tag_flickr'] = 'The Flickr block plugin does not store any personal data, but does transmit user data from Moodle to the remote system.';
-$string['privacy:metadata:block_tag_flickr:tags'] = 'The tag values sent as CSV format to search for Flickr images.';
+$string['relevance'] = 'Pertinence';
+$string['sortby'] = 'Trier par';
+$string['tag_flickr:addinstance'] = 'Ajouter un nouveau block Flickr';
+$string['privacy:metadata:block_tag_flickr'] = 'Le plugin de bloc Flickr ne stocke aucune donnée personnelle, mais transmet des données utilisateur de Moodle au système distant.';
+$string['privacy:metadata:block_tag_flickr:tags'] = 'Les valeurs de tag envoyées au format CSV pour rechercher des images Flickr.';

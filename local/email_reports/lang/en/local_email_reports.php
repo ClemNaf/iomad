@@ -25,14 +25,14 @@
  * Strings for component 'local_email', language 'en'
  */
 
-$string['blocktitle'] = 'Email Reports';
-$string['pluginname'] = 'Email Reports';
-$string['privacy:metadata'] = 'The IOMAD Local email reports plugin only shows data stored in other locations.';
-$string['company_license_expiring_task'] = 'Email reports - Company licenses expiring task';
-$string['course_not_completed_task'] = 'Email reports - Course not completed task';
-$string['course_not_started_task'] = 'Email reports - Course not started task';
-$string['course_expiry_warning_task'] = 'Email reports - Course expiry warning task';
-$string['manager_completion_digest_task'] = 'Email reports - Manager recent completions digest task';
-$string['manager_warning_digest_task'] = 'Email reports - Manager courses not completed warning digest task';
-$string['manager_expiring_digest_task'] = 'Email reports - Manager courses expiring warning digest task';
-$string['trainingevent_not_selected_task'] = 'Email reports - Training event not selected task';
+$string['blocktitle'] = 'Rapports par email';
+$string['pluginname'] = 'Rapports par email';
+$string['privacy:metadata'] = 'Le plugin Local email reports IOMAD ne montre que des données stockées ailleurs.';
+$string['company_license_expiring_task'] = 'Rapports par email - Tâche de licences d\'entreprise expirant';
+$string['course_not_completed_task'] = 'Rapports par email - Tâche de cours non terminés';
+$string['course_not_started_task'] = 'Rapports par email - Tâche de cours non commencés';
+$string['course_expiry_warning_task'] = 'Rapports par email - Tâche d\'avertissement d\'expiration de cours';
+$string['manager_completion_digest_task'] = 'Rapports par email - Tâche de résumé des achèvements récents du manager';
+$string['manager_warning_digest_task'] = 'Rapports par email - Tâche de résumé des avertissements de cours non terminés du manager';
+$string['manager_expiring_digest_task'] = 'Rapports par email - Tâche de résumé des avertissements d\'expiration de cours du manager';
+$string['trainingevent_not_selected_task'] = 'Rapports par email - Tâche d\'événement de formation non sélectionné';

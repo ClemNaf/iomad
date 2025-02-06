@@ -22,6 +22,6 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Social activities';
-$string['social_activities:addinstance'] = 'Add a new social activities block';
-$string['privacy:metadata'] = 'The Social activities block only shows data stored in other locations.';
+$string['pluginname'] = 'Activités sociales';
+$string['social_activities:addinstance'] = 'Ajouter un nouveau bloc d\'activités sociales';
+$string['privacy:metadata'] = 'Le bloc d\'activités sociales ne montre que des données stockées ailleurs.';

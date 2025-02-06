@@ -24,21 +24,21 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['brokenlicenses'] = 'Number of records with broken license information : {$a}';
-$string['brokencompletions'] = 'Number of records with broken completion information : {$a}';
-$string['checklearningrecordstask'] = 'Check learning records adhoc task';
-$string['companyid'] = 'Company ID';
-$string['courseid'] = 'Course ID';
-$string['doit'] = 'Yes, do it!';
-$string['fromdate'] = 'Completion from date';
-$string['idnumber'] = 'From tracking id number';
-$string['missingcompletions'] = 'Number of records which are completed but not recorded : {$a}';
-$string['notifyfinished'] = '...finished';
-$string['pageheader'] = 'Check stored learning records';
-$string['privacy:metadata'] = 'Admin tool check stored learning records doesn\'t store any user details';
-$string['pluginname'] = 'Check stored learning records';
-$string['searchusers'] = 'Select a user';
-$string['searchcourses'] = 'Select a course';
-$string['searchcompanies'] = 'Select a company';
-$string['todate'] = 'Completion to date';
-$string['userid'] = 'User ID';
+$string['brokenlicenses'] = 'Nombre d\'enregistrements avec des informations de licence cassées : {$a}';
+$string['brokencompletions'] = 'Nombre d\'enregistrements avec des informations de complétion cassées : {$a}';
+$string['checklearningrecordstask'] = 'Vérification des enregistrements d\'apprentissage tâche adhoc';
+$string['companyid'] = 'ID de l\'entreprise';
+$string['courseid'] = 'ID du cours';
+$string['doit'] = 'Oui, faites-le!';
+$string['fromdate'] = 'Date de complétion à partir de';
+$string['idnumber'] = 'À partir du numéro de suivi';
+$string['missingcompletions'] = 'Nombre d\'enregistrements qui sont terminés mais non enregistrés : {$a}';
+$string['notifyfinished'] = '...terminé';
+$string['pageheader'] = 'Vérifier les enregistrements d\'apprentissage stockés';
+$string['privacy:metadata'] = 'L\'outil d\'administration vérifie les enregistrements d\'apprentissage stockés ne stocke aucune information utilisateur';
+$string['pluginname'] = 'Vérifier les enregistrements d\'apprentissage stockés';
+$string['searchusers'] = 'Sélectionnez un utilisateur';
+$string['searchcourses'] = 'Sélectionnez un cours';
+$string['searchcompanies'] = 'Sélectionnez une entreprise';
+$string['todate'] = 'Date de complétion jusqu\'à';
+$string['userid'] = 'ID de l\'utilisateur';

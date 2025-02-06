@@ -22,7 +22,7 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['blog_tags:addinstance'] = 'Add a new blog tags block';
-$string['pluginname'] = 'Blog tags';
-$string['configtitle'] = 'Blog tags block title';
-$string['privacy:metadata'] = 'The Blog tags block only shows data stored in other locations.';
+$string['blog_tags:addinstance'] = 'Ajouter un nouveau bloc de tags de blog';
+$string['pluginname'] = 'Tags de blog';
+$string['configtitle'] = 'Titre du bloc de tags de blog';
+$string['privacy:metadata'] = 'Le bloc de tags de blog ne montre que des données stockées ailleurs.';

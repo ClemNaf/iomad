@@ -31,182 +31,185 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Merge user accounts';
-$string['header'] = 'Merge two users into a single account';
+$string['pluginname'] = 'Fusionner des comptes utilisateurs';
+$string['header'] = 'Fusionner deux utilisateurs en un seul compte';
 $string['header_help'] =
-'<p>Given a user to be deleted and a user to keep, this will merge the user data
- associated with the former user into the latter user. Note that both users must
- already exist and no accounts will actually be deleted. That process is left to the
- administrator to do manually.</p>
- <p><strong>Only do this if you know what you are doing as it is not reversable!</strong></p>';
-$string['usermergingheader'] = '&laquo;{$a->username}&raquo; (user ID = {$a->id})';
-$string['errorsameuser'] = 'Trying to merge the same user';
-$string['iomadmerge'] = 'Merge user accounts';
-$string['iomadmerge:iomadmerge'] = 'Merge user accounts';
-$string['merging'] = 'Merged';
-$string['into'] = 'into';
-$string['newuserid'] = 'User ID to be kept';
-$string['olduserid'] = 'User ID to be removed';
-$string['iomadmerge:view'] = 'Merge User Accounts';
-$string['tableok'] = 'Table {$a} : update OK';
-$string['tableko'] = 'Table {$a} : update NOT OK!';
-$string['logok'] = 'Here are the queries that have been sent to the DB:';
-$string['logko'] = 'Some error occurred:';
-$string['logid'] = 'For further reference, these results are recorded in the log id {$a}.';
-$string['dbok'] = 'Merge successful';
-$string['dbko_transactions'] = '<strong>Merge failed!</strong> <br/>Your database engine
-    supports transactions. Therefore, the whole current transaction has been rolled back
-    and <strong>no modification has been made to your database</strong>.';
-$string['dbko_no_transactions'] = '<strong>Merge failed!</strong> <br/>Your database engine
-    does not support transactions. Therefore, your database <strong>has been updated</strong>.
-    Your database status may be inconsistent. <br/>But, take a look at the merging log
-    and, please, inform about the error to plugin developers. You will get a solution
-    in short time. After updating the plugin to its last version, which will include the solution
-    to that problem, repeat the merging action to complete it with success.';
-$string['tableskipped'] = 'For logging or security reasons we are skipping <strong>{$a}</strong>.
- <br />To remove these entries, delete the old user once this script has run successfully.';
-$string['invaliduser'] = 'Invalid user';
-$string['cligathering:description'] = "Introduce pairs of user's id to merge the first one into the\n
-second one. The first user id (fromid) will 'lose' all its data to be 'migrated'\n
-into the second one (toid). The user 'toid' will include data from both users.";
-$string['cligathering:stopping'] = 'To stop merging, Ctrl+C or type -1 either on fromid or toid fields.';
-$string['cligathering:fromid'] = 'Source user id (fromid):';
-$string['cligathering:toid'] =   'Target user id   (toid):';
-$string['viewlog'] = 'See merging logs';
-$string['loglist'] = 'All these records are merging actions done, showing if they went ok:';
-$string['newuseridonlog'] = 'User kept';
-$string['olduseridonlog'] = 'User removed';
-$string['nologs'] = 'There is no merging logs yet. Good for you!';
-$string['wronglogid'] = 'The log you are asking for does not exist.';
-$string['deleted'] = 'User with ID {$a} was deleted';
-$string['errortransactionsonly'] = 'Error: transactions are required, but your database type {$a}
-    does not support them. If needed, you can allow merging users without transactions.
-    Please, review plugin settings to set up them accordingly.';
-$string['eventusermergedsuccess'] = 'Merging success';
-$string['eventusermergedfailure'] = 'Merge failed';
+'<p>En donnant un utilisateur à supprimer et un utilisateur à conserver, cela fusionnera les données utilisateur
+ associées au premier utilisateur dans le second utilisateur. Notez que les deux utilisateurs doivent déjà exister et aucun compte ne sera réellement supprimé. Ce processus est laissé à l\'administr
+ateur pour le faire manuellement.</p>
+
+<p><strong>Ne faites cela que si vous savez ce que vous faites car cela n\'est pas réversible !</strong></p>';
+$string['usermergingheader'] = '&laquo;{$a->username}&raquo; (ID utilisateur = {$a->id})';
+$string['errorsameuser'] = 'Tentative de fusionner le même utilisateur';
+$string['iomadmerge'] = 'Fusionner des comptes utilisateurs';
+$string['iomadmerge:iomadmerge'] = 'Fusionner des comptes utilisateurs';
+$string['merging'] = 'Fusionné';
+$string['into'] = 'dans';
+$string['newuserid'] = 'ID utilisateur à conserver';
+$string['olduserid'] = 'ID utilisateur à supprimer';
+$string['iomadmerge:view'] = 'Fusionner des comptes utilisateurs';
+$string['tableok'] = 'Table {$a} : mise à jour OK';
+$string['tableko'] = 'Table {$a} : mise à jour PAS OK !';
+$string['logok'] = 'Voici les requêtes qui ont été envoyées à la base de données :';
+$string['logko'] = 'Une erreur s\'est produite :';
+$string['logid'] = 'Pour référence ultérieure, ces résultats sont enregistrés dans le journal ID {$a}.';
+$string['dbok'] = 'Fusion réussie';
+$string['dbko_transactions'] = '<strong>Échec de la fusion !</strong> <br/>Votre moteur de base de données
+    prend en charge les transactions. Par conséquent, l\'ensemble de la transaction actuelle a été annulée
+    et <strong>aucune modification n\'a été apportée à votre base de données</strong>.';
+$string['dbko_no_transactions'] = '<strong>Échec de la fusion !</strong> <br/>Votre moteur de base de données
+    ne prend pas en charge les transactions. Par conséquent, votre base de données <strong>a été mise à jour</strong>.
+    L\'état de votre base de données peut être incohérent. <br/>Mais, consultez le journal de fusion
+    et, s\'il vous plaît, informez les développeurs du plugin de l\'erreur. Vous obtiendrez une solution
+    dans un court délai. Après avoir mis à jour le plugin à sa dernière version, qui inclura la solution
+    à ce problème, répétez l\'action de fusion pour la compléter avec succès.';
+$string['tableskipped'] = 'Pour des raisons de journalisation ou de sécurité, nous sautons <strong>{$a}</strong>.
+    <br />Pour supprimer ces entrées, supprimez l\'ancien utilisateur une fois ce script exécuté avec succès.';
+$string['invaliduser'] = 'Utilisateur invalide';
+$string['cligathering:description'] = "Introduisez des paires d'identifiants d'utilisateurs à fusionner le premier dans le\n
+second. Le premier identifiant d'utilisateur (fromid) 'perdra' toutes ses données pour être 'migré'\n
+dans le second (toid). L'utilisateur 'toid' inclura les données des deux utilisateurs.";
+$string['cligathering:stopping'] = 'Pour arrêter la fusion, appuyez sur Ctrl+C ou tapez -1 sur les champs fromid ou toid.';
+$string['cligathering:fromid'] = 'Identifiant de l\'utilisateur source (fromid) :';
+$string['cligathering:toid'] =   'Identifiant de l\'utilisateur cible   (toid) :';
+$string['viewlog'] = 'Voir les journaux de fusion';
+$string['loglist'] = 'Tous ces enregistrements sont des actions de fusion effectuées, montrant si elles se sont bien déroulées :';
+$string['newuseridonlog'] = 'Utilisateur conservé';
+$string['olduseridonlog'] = 'Utilisateur supprimé';
+$string['nologs'] = 'Il n\'y a pas encore de journaux de fusion. Tant mieux pour vous !';
+$string['wronglogid'] = 'Le journal que vous demandez n\'existe pas.';
+$string['deleted'] = 'Utilisateur avec ID {$a} a été supprimé';
+$string['errortransactionsonly'] = 'Erreur : les transactions sont requises, mais votre type de base de données {$a}
+    ne les prend pas en charge. Si nécessaire, vous pouvez autoriser la fusion d\'utilisateurs sans transactions.
+    Veuillez examiner les paramètres du plugin pour les configurer en conséquence.';
+$string['eventusermergedsuccess'] = 'Fusion réussie';
+$string['eventusermergedfailure'] = 'Échec de la fusion';
 
 // Settings page
-$string['transactions_setting'] = 'Only transactions allowed';
-$string['transactions_setting_desc'] = 'If enabled, merge users will not work
-    at all on databases that do NOT support transactions (recommended).
-    Enabling it is necessary to ensure that your database remains consistent
-    in case of merging errors. <br />If disabled, you will always run merging actions.
-    In case of errors, the merging log will show you what was the problem.
-    Reporting it to the plugin supporters will give you a solution in short.
-    <br />Above all, core Moodle tables and some third party plugins are already
-    considered by this plugin. If you do not have any third party plugins
-    in your Moodle installation, you can be quiet on running this plugin
-    enabling or disabling this option.';
-$string['transactions_supported'] = 'For your information, your database
-    <strong>supports transactions</strong>.';
-$string['transactions_not_supported'] = 'For your information, your database
-    <strong>does not supports transactions</strong>.';
-$string['excluded_exceptions'] = 'Exclude exceptions';
-$string['excluded_exceptions_desc'] = 'Experience on this subject suggests
-    that all these database tables should be excluded from merging. See
-    README for more details. <br>
-    Therefore, for applying default plugin behaviour, you need to choose \'{$a}\'
-    to exclude all those tables from the merging process (recommended).<br>
-    If you prefer, you can exclude any of those tables and include them in the
-    merging process (not recommended).';
+$string['transactions_setting'] = 'Seules les transactions sont autorisées';
+$string['transactions_setting_desc'] = 'Si activé, la fusion d\'utilisateurs ne fonctionnera pas
+    du tout sur les bases de données qui ne prennent PAS en charge les transactions (recommandé).
+    L\'activer est nécessaire pour garantir que votre base de données reste cohérente
+    en cas d\'erreurs de fusion. <br />Si désactivé, vous exécuterez toujours des actions de fusion.
+    En cas d\'erreurs, le journal de fusion vous montrera quel était le problème.
+    Le signaler aux partisans du plugin vous donnera une solution en peu de temps.
+    <br />Surtout, les tables de base de Moodle et certains plugins tiers sont déjà
+    pris en compte par ce plugin. Si vous n\'avez pas de plugins tiers
+    dans votre installation Moodle, vous pouvez être tranquille en exécutant ce plugin
+    en activant ou désactivant cette option.';
+$string['transactions_supported'] = 'Pour votre information, votre base de données
+    <strong>prend en charge les transactions</strong>.';
+$string['transactions_not_supported'] = 'Pour votre information, votre base de données
+<strong>ne supporte pas les transations</strong>';
+$string['excluded_exceptions'] = 'Exclure les exceptions';
+$string['excluded_exceptions_desc'] = 'L\'expérience sur ce sujet suggère
+    que toutes ces tables de base de données doivent être exclues de la fusion. Voir
+    README pour plus de détails. <br>
+    Par conséquent, pour appliquer le comportement par défaut du plugin, vous devez choisir \'{$a}\'
+    pour exclure toutes ces tables du processus de fusion (recommandé).<br>
+    Si vous préférez, vous pouvez exclure l\'une de ces tables et les inclure dans le
+    processus de fusion (non recommandé).';
 
 //New strings
 
 // Progress bar
-$string['choose_users'] = 'Choose users to merge';
-$string['review_users'] = 'Confirm users to merge';
-$string['results'] = 'Merging results and log';
+$string['choose_users'] = 'Choisir les utilisateurs à fusionner';
+$string['review_users'] = 'Confirmer les utilisateurs à fusionner';
+$string['results'] = 'Résultats de la fusion et journal';
 
 // Form Strings
-$string['form_header'] = 'Find users to merge';
-$string['form_description'] = '<p>You may search for users here if you don\'t
-    know the user\'s username/id number. Otherwise you may expand the form to
-    enter that information directly.  Please see help on fields for more
-    information</p>';
-$string['searchuser'] = 'Search for User';
-$string['searchuser_help'] = 'Enter a username, first/last name, email address
-    or user id to search for potential users. You may also specify if you only
-    want to search through a particular field.';
-$string['iomadmergeadvanced'] = '<strong>Direct user input</strong>';
-$string['iomadmergeadvanced_help'] = 'Here you can enter the below fields if
-    you know exactly what users that you want to merge.<br /><br />
-    Click the "search" button in order to verify/confirm that the input entered
-    are in fact users.';
-$string['iomadmerge_confirm'] = 'After confirming the merge process will start.
-    <br /><strong>This will not be reversible!</strong>
-    Are you sure you want to continue?';
-$string['clear_selection'] = 'Clear current user selection';
+$string['form_header'] = 'Trouver les utilisateurs à fusionner';
+$string['form_description'] = '<p>Vous pouvez rechercher des utilisateurs ici si vous ne connaissez pas
+    le nom d\'utilisateur / l\'identifiant de l\'utilisateur. Sinon, vous pouvez
+    développer le formulaire pour entrer ces informations directement. Veuillez consulter l\'aide sur les champs pour plus
+    d\'informations</p>';
+$string['searchuser'] = 'Rechercher un utilisateur';
+$string['searchuser_help'] = 'Entrez un nom d\'utilisateur, un prénom / nom de famille, une adresse e-mail
+    ou un identifiant d\'utilisateur pour rechercher des utilisateurs potentiels. Vous pouvez également spécifier si vous voulez
+    rechercher uniquement dans un champ particulier.';
+$string['iomadmergeadvanced'] = '<strong>Entrée directe de l\'utilisateur</strong>';
+$string['iomadmergeadvanced_help'] = 'Ici, vous pouvez entrer les champs ci-dessous si
+    vous savez exactement quels utilisateurs vous voulez fusionner.<br /><br />
+    Cliquez sur le bouton "rechercher" pour vérifier / confirmer que les entrées saisies
+    sont en fait des utilisateurs.';
+$string['iomadmerge_confirm'] = 'Après confirmation, le processus de fusion commencera.
+    <br /><strong>Cela ne sera pas réversible !</strong>
+    Êtes-vous sûr de vouloir continuer ?';
+$string['clear_selection'] = 'Effacer la sélection d\'utilisateurs actuelle';
 
 // Merge users select table
-$string['olduser'] = 'User to remove';
-$string['newuser'] = 'User to keep';
-$string['saveselection_submit'] = 'Save selection';
-$string['userselecttable_legend'] = '<b>Select users to merge</b>';
+$string['olduser'] = 'Utilisateur à supprimer';
+$string['newuser'] = 'Utilisateur à conserver';
+$string['saveselection_submit'] = 'Enregistrer la sélection';
+$string['userselecttable_legend'] = '<b>Sélectionner les utilisateurs à fusionner</b>';
 
 // Merge users review table
-$string['userreviewtable_legend'] = '<b>Review users to merge</b>';
+$string['userreviewtable_legend'] = '<b>Examiner les utilisateurs à fusionner</b>';
 
 // Error string
-$string['error_return'] = 'Return to search form';
-$string['no_saveselection'] = 'You did not select either an old or new user.';
-$string['invalid_option'] = 'Invalid form option';
+$string['error_return'] = 'Retourner au formulaire de recherche';
+$string['no_saveselection'] = 'Vous n\'avez pas sélectionné un ancien ou un nouvel utilisateur.';
+$string['invalid_option'] = 'Option de formulaire invalide';
 
 // Settings page
-$string['suspenduser_setting'] = 'Suspend old user';
-$string['suspenduser_setting_desc'] = 'If enabled, it suspends the old user
-    automatically upon a succesful merging process, preventing the user
-    from logging in Moodle (recommended). If disabled, the old user remains active.
-    In both cases, old user will not have his/her related data.';
-$string['transactions_setting'] = 'Only transactions allowed';
-$string['transactions_setting_desc'] = 'If enabled, merge users will not work
-    at all on databases that do NOT support transactions (recommended).
-    Enabling it is necessary to ensure that your database remains consistent
-    in case of merging errors. <br />If disabled, you will always run merging actions.
-    In case of errors, the merging log will show you what was the problem.
-    Reporting it to the plugin supporters will give you a solution in short.
-    <br />Above all, core Moodle tables and some third party plugins are already
-    considered by this plugin. If you do not have any third party plugins
-    in your Moodle installation, you can be quiet on running this plugin
-    enabling or disabling this option.';
+$string['suspenduser_setting'] = 'Suspendre l\'ancien utilisateur';
+$string['suspenduser_setting_desc'] = 'Si activé, il suspend automatiquement l\'ancien utilisateur
+    lors d\'un processus de fusion réussi, empêchant l\'utilisateur de se connecter à Moodle (recommandé).
+    Si désactivé, l\'ancien utilisateur reste actif.
+    Dans les deux cas, l\'ancien utilisateur n\'aura pas ses données associées.';
+$string['transactions_setting'] = 'Seules les transactions sont autorisées';
+$string['transactions_setting_desc'] = 'Si activé, la fusion d\'utilisateurs ne fonctionnera pas
+    du tout sur les bases de données qui ne prennent PAS en charge les transactions (recommandé).
+    L\'activer est nécessaire pour garantir que votre base de données reste cohérente
+    en cas d\'erreurs de fusion. <br />Si désactivé, vous exécuterez toujours des actions de fusion.
+    En cas d\'erreurs, le journal de fusion vous montrera quel était le problème.
+    Le signaler aux partisans du plugin vous donnera une solution en peu de temps.
+    <br />Surtout, les tables de base de Moodle et certains plugins tiers sont déjà
+    pris en compte par ce plugin. Si vous n\'avez pas de plugins tiers
+    dans votre installation Moodle, vous pouvez être tranquille en exécutant ce plugin
+    en activant ou désactivant cette option.';
+
 
 // quiz attempts strings
-$string['quizattemptsaction'] = 'How to resolve quiz attempts';
-$string['quizattemptsaction_desc'] = 'When merging quiz attempts there may exist three cases:
+$string['quizattemptsaction'] = 'Comment résoudre les tentatives de quiz';
+$string['quizattemptsaction_desc'] = 'Lors de la fusion des tentatives de quiz, il peut exister trois cas :
     <ol>
-    <li>Only the old user has quiz attempts. All attemps will appear as if they were made by the new user.</li>
-    <li>Only the new user has quiz attempts. All is correct and nothing is done.</li>
-    <li>Both users have attempts for the same quiz. <strong>You have to choose what to do in this case of conflict.
-    </strong>. You are required to choose one of the following actions:
+    <li>Seul l\'ancien utilisateur a des tentatives de quiz. Toutes les tentatives apparaîtront comme si elles avaient été faites par le nouvel utilisateur.</li>
+    <li>Seul le nouvel utilisateur a des tentatives de quiz. Tout est correct et rien n\'est fait.</li>
+    <li>Les deux utilisateurs ont des tentatives pour le même quiz. <strong>Vous devez choisir quoi faire dans ce cas de conflit.
+    </strong>. Vous devez choisir l\'une des actions suivantes :
         <ul>
-        <li><strong>{$a->renumber}</strong>. Attempts from the old user are merged with the ones of the new user
-        and renumbered by the time they were started.</li>
-        <li><strong>{$a->delete_fromid}</strong>. Attempts from the old user are removed. Attempts from the new user
-        are kept, since this option considers them as the most important.</li>
-        <li><strong>{$a->delete_toid}</strong>. Attempts from the new user are removed. Attempts from
-        the old user are kept, since this option considers them as the most important.</li>
-        <li><strong>{$a->remain}</strong> (by default). Attempts are not merged nor deleted, remaining related to
-        the user who made them. This is the most secure action, but merging users from user A to user B or B to A may
-        produce different quiz grades.</li>
+        <li><strong>{$a->renumber}</strong>. Les tentatives de l\'ancien utilisateur sont fusionnées avec celles du nouvel utilisateur
+        et renumérotées par le moment où elles ont été commencées.</li>
+        <li><strong>{$a->delete_fromid}</strong>. Les tentatives de l\'ancien utilisateur sont supprimées. Les tentatives du nouvel utilisateur
+        sont conservées, car cette option les considère comme les plus importantes.</li>
+        <li><strong>{$a->delete_toid}</strong>. Les tentatives du nouvel utilisateur sont supprimées. Les tentatives de
+        l\'ancien utilisateur sont conservées, car cette option les considère comme les plus importantes.</li>
+        <li><strong>{$a->remain}</strong> (par défaut). Les tentatives ne sont pas fusionnées ni supprimées, restant liées à
+        l\'utilisateur qui les a faites. C\'est l\'action la plus sûre, mais la fusion des utilisateurs de l\'utilisateur A à l\'utilisateur B ou de B à A peut
+        produire des notes de quiz différentes.</li>
         </ul>
     </li>
     </ol>';
-$string['qa_action_renumber'] = 'Merge attempts from both users and renumber';
-$string['qa_action_delete_fromid'] = 'Keep attempts from the new user';
-$string['qa_action_delete_toid'] = 'Keep attempts from the old user';
-$string['qa_action_remain'] = 'Do nothing: do not merge nor delete';
-$string['qa_action_remain_log'] = 'User data from table <strong>{$a}</strong> are not updated.';
-$string['qa_chosen_action'] = 'Active option for quiz attempts: {$a}.';
+$string['qa_action_renumber'] = 'Fusionner les tentatives des deux utilisateurs et renuméroter';
+$string['qa_action_delete_fromid'] = 'Conserver les tentatives du nouvel utilisateur';
+$string['qa_action_delete_toid'] = 'Conserver les tentatives de l\'ancien utilisateur';
+$string['qa_action_remain'] = 'Ne rien faire : ne pas fusionner ni supprimer';
+$string['qa_action_remain_log'] = 'Les données utilisateur de la table <strong>{$a}</strong> ne sont pas mises à jour.';
+$string['qa_chosen_action'] = 'Option active pour les tentatives de quiz : {$a}.';
 
-$string['qa_grades'] = 'Grades recalculated for quizzes: {$a}.';
+$string['qa_grades'] = 'Notes recalculées pour les quiz : {$a}.';
 
-$string['uniquekeynewidtomaintain'] = 'Keep new user\'s data';
-$string['uniquekeynewidtomaintain_desc'] = 'In case of conflict, 
-    like when the user.id related column is a unique key, this plugin will keep 
-    data from new user (by default). This also means that data from old user is 
-    deleted to keep the consistence. Otherwise, if you uncheck this option, 
-    data from old user will be kept.';
+$string['uniquekeynewidtomaintain'] = 'Conserver les données du nouvel utilisateur';
+$string['uniquekeynewidtomaintain_desc'] = 'En cas de conflit,
+    comme lorsque la colonne liée à l\'identifiant de l\'utilisateur est une clé unique,
+    ce plugin conservera les données du nouvel utilisateur (par défaut). Cela signifie également que les données de l\'ancien utilisateur sont
+    supprimées pour maintenir la cohérence. Sinon, si vous décochez cette option,
+    les données de l\'ancien utilisateur seront conservées.';
 
-$string['starttime'] = 'Started merging at {$a}';
-$string['finishtime'] = 'Finished merging at {$a}';
-$string['timetaken'] = 'Merge took {$a} seconds';
-$string['privacy:metadata'] = 'The Merge User Accounts plugin does not store any personal data.';
+$string['starttime'] = 'Début de la fusion à {$a}';
+$string['finishtime'] = 'Fin de la fusion à {$a}';
+$string['timetaken'] = 'La fusion a pris {$a} secondes';
+$string['privacy:metadata'] = 'Le plugin Fusionner des comptes utilisateurs ne stocke aucune donnée personnelle.';
+
+

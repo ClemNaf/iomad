@@ -22,9 +22,9 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['displaycategories'] = 'Display categories';
-$string['displaycategories_help'] = 'Display the course category on the starred courses block items.';
-$string['pluginname'] = 'Starred courses';
-$string['privacy:metadata'] = 'The starred courses block does not store any personal data.';
-$string['starredcourses:myaddinstance'] = 'Add a new starred courses block to Dashboard';
-$string['nocourses'] = 'No starred courses';
+$string['displaycategories'] = 'Afficher les catégories';
+$string['displaycategories_help'] = 'Afficher la catégorie de cours sur les éléments du bloc de cours favoris.';
+$string['pluginname'] = 'Cours favoris';
+$string['privacy:metadata'] = 'Le bloc de cours favoris ne stocke aucune donnée personnelle.';
+$string['starredcourses:myaddinstance'] = 'Ajouter un nouveau bloc de cours favoris au tableau de bord';
+$string['nocourses'] = 'Aucun cours favori';

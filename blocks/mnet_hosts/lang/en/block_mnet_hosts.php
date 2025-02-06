@@ -22,11 +22,11 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['error_authmnetneeded'] = 'MNet authentication plugin must be enabled to see the list of MNet network servers';
-$string['error_localusersonly'] = 'Remote users can not jump to other MNet network servers from this host';
-$string['error_roamcapabilityneeded'] = 'Users need the capability \'Roam to a remote application via MNet\' to see the list of MNet network servers';
-$string['mnet_hosts:addinstance'] = 'Add a new network servers block';
-$string['mnet_hosts:myaddinstance'] = 'Add a new network servers block to Dashboard';
-$string['pluginname'] = 'Network servers';
-$string['server'] = 'Server';
-$string['privacy:metadata'] = 'The Network servers block only allows interaction with Network servers and neither stores or exports data itself.';
+$string['error_authmnetneeded'] = 'Le plugin d\'authentification MNet doit être activé pour voir la liste des serveurs du réseau MNet';
+$string['error_localusersonly'] = 'Les utilisateurs distants ne peuvent pas sauter vers d\'autres serveurs du réseau MNet à partir de cet hôte';
+$string['error_roamcapabilityneeded'] = 'Les utilisateurs ont besoin de la capacité \'Rôder vers une application distante via MNet\' pour voir la liste des serveurs du réseau MNet';
+$string['mnet_hosts:addinstance'] = 'Ajouter un nouveau bloc de serveurs réseau';
+$string['mnet_hosts:myaddinstance'] = 'Ajouter un nouveau bloc de serveurs réseau au tableau de bord';
+$string['pluginname'] = 'Serveurs réseau';
+$string['server'] = 'Serveur';
+$string['privacy:metadata'] = 'Le bloc Serveurs réseau ne permet que l\'interaction avec les serveurs réseau et ne stocke ni n\'exporte de données lui-même.';

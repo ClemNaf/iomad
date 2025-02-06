@@ -22,8 +22,8 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Private files';
-$string['privatefiles'] = 'Private files';
-$string['private_files:addinstance'] = 'Add a new private files block';
-$string['private_files:myaddinstance'] = 'Add a new private files block to Dashboard';
-$string['privacy:metadata'] = 'The Private files block only provides a view of, and a link to, the user\'s private files.';
+$string['pluginname'] = 'Fichiers privés';
+$string['privatefiles'] = 'Fichiers privés';
+$string['private_files:addinstance'] = 'Ajouter un nouveau bloc de fichiers privés';
+$string['private_files:myaddinstance'] = 'Ajouter un nouveau bloc de fichiers privés au tableau de bord';
+$string['privacy:metadata'] = 'Le bloc de fichiers privés ne fournit qu\'une vue et un lien vers les fichiers privés de l\'utilisateur.';

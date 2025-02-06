@@ -22,6 +22,6 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['activity_modules:addinstance'] = 'Add a new activities block';
-$string['pluginname'] = 'Activities';
-$string['privacy:metadata'] = 'The Activities block only shows data stored in other locations.';
+ $string['activity_modules:addinstance'] = 'Ajouter un nouveau bloc d\'activités';
+$string['pluginname'] = 'Activités';
+$string['privacy:metadata'] = 'Les blocs d\'activités ne montrent que des données stockées ailleurs.';

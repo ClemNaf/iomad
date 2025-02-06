@@ -22,7 +22,7 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['advancedsearch'] = 'Advanced search';
-$string['pluginname'] = 'Search forums';
-$string['search_forums:addinstance'] = 'Add a new search forums block';
-$string['privacy:metadata'] = 'The Search forums block only shows data stored in other locations.';
+$string['advancedsearch'] = 'Recherche avancée';
+$string['pluginname'] = 'Rechercher dans les forums';
+$string['search_forums:addinstance'] = 'Ajouter un nouveau bloc de recherche de forums';
+$string['privacy:metadata'] = 'Le bloc de recherche de forums ne montre que des données stockées ailleurs.';

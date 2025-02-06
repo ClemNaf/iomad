@@ -21,19 +21,19 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['clearingcertificate'] = 'Clearing ID {$a->id} - {$a->count} out of {$a->total}';
-$string['companyid'] = 'Company ID';
-$string['courseid'] = 'Course ID';
-$string['doit'] = 'Yes, do it!';
-$string['fromdate'] = 'Completion from date';
-$string['idnumber'] = 'From tracking id number';
-$string['notifyfinished'] = '...finished';
-$string['pageheader'] = 'Recreate stored certificates';
-$string['privacy:metadata'] = 'Admin tool redo certs doesn\'t store any user details';
-$string['pluginname'] = 'Recreate stored certificates';
-$string['recreatingcertificate'] = 'Recreating Certificate - ';
-$string['searchusers'] = 'Select a user';
-$string['searchcourses'] = 'Select a course';
-$string['searchcompanies'] = 'Select a company';
-$string['todate'] = 'Completion to date';
-$string['userid'] = 'User ID';
+$string['clearingcertificate'] = 'Effacement ID {$a->id} - {$a->count} sur {$a->total}';
+$string['companyid'] = 'ID de l\'entreprise';
+$string['courseid'] = 'ID du cours';
+$string['doit'] = 'Oui, faites-le!';
+$string['fromdate'] = 'Date de fin à partir de';
+$string['idnumber'] = 'De numéro de suivi';
+$string['notifyfinished'] = '...terminé';
+$string['pageheader'] = 'Recréer les certificats stockés';
+$string['privacy:metadata'] = 'L\'outil d\'administration refaire les certificats ne stocke aucune donnée utilisateur';
+$string['pluginname'] = 'Recréer les certificats stockés';
+$string['recreatingcertificate'] = 'Recréation du certificat - ';
+$string['searchusers'] = 'Sélectionnez un utilisateur';
+$string['searchcourses'] = 'Sélectionnez un cours';
+$string['searchcompanies'] = 'Sélectionnez une entreprise';
+$string['todate'] = 'Date de fin jusqu\'à';
+$string['userid'] = 'ID de l\'utilisateur';

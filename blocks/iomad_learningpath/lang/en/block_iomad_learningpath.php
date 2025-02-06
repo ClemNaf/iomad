@@ -22,22 +22,23 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['coursedepends'] = 'Complete {$a} first';
-$string['entercourse'] = 'Enter course';
-$string['iomad_learningpath:addinstance'] = 'Add learning path block';
-$string['iomad_learningpath:myaddinstance'] = 'Add learning path block to Moodle Dashboard';
-$string['nocompletion'] = 'No progress data yet';
-$string['nopathprogress'] = 'No progress data yet';
-$string['nopaths'] = 'You have no learning paths';
-$string['open'] = 'Open';
-$string['pluginname'] = 'Learning paths';
-$string['returntopath'] = 'Return to learning paths';
-$string['learningpathssyncedtotemplate'] = 'Learning paths synced to this learning plan template';
-$string['addlearningpaths'] = 'Add learningpaths';
-$string['selectlearningpathstosync'] = 'Select learning paths to sync';
-$string['stopsyncinglearningpath'] = 'Stop syncing learning path';
-$string['templatelearningpathnotsyncedwhilehidden'] = 'Learning path will not be synchronised while this template is hidden.'; 
-$string['templatelearningpathnotsyncedwhileduedateispassed'] = 'Learning paths will not be synchronised if the template\'s due date has passed.';
-$string['assignlearningpaths'] = 'Assign learning paths';
-$string['syncplanslearningpaths'] = 'Sync plans from learning plan template learning paths';
-$string['addlearningpathstosync'] = 'Add learning paths to sync';
+//French
+$string['coursedepends'] = 'Compléter {$a} d\'abord';
+$string['entercourse'] = 'Entrer dans le cours';
+$string['iomad_learningpath:addinstance'] = 'Ajouter un bloc de parcours d\'apprentissage';
+$string['iomad_learningpath:myaddinstance'] = 'Ajouter un bloc de parcours d\'apprentissage au tableau de bord Moodle';
+$string['nocompletion'] = 'Pas encore de données de progression';
+$string['nopathprogress'] = 'Pas encore de données de progression';
+$string['nopaths'] = 'Vous n\'avez pas de parcours d\'apprentissage';
+$string['open'] = 'Ouvrir';
+$string['pluginname'] = 'Parcours d\'apprentissage';
+$string['returntopath'] = 'Retour aux parcours d\'apprentissage';
+$string['learningpathssyncedtotemplate'] = 'Parcours d\'apprentissage synchronisés avec ce modèle de plan d\'apprentissage';
+$string['addlearningpaths'] = 'Ajouter des parcours d\'apprentissage';
+$string['selectlearningpathstosync'] = 'Sélectionner les parcours d\'apprentissage à synchroniser';
+$string['stopsyncinglearningpath'] = 'Arrêter de synchroniser le parcours d\'apprentissage';
+$string['templatelearningpathnotsyncedwhilehidden'] = 'Le parcours d\'apprentissage ne sera pas synchronisé tant que ce modèle sera masqué.';
+$string['templatelearningpathnotsyncedwhileduedateispassed'] = 'Les parcours d\'apprentissage ne seront pas synchronisés si la date d\'échéance du modèle est passée.';
+$string['assignlearningpaths'] = 'Assigner des parcours d\'apprentissage';
+$string['syncplanslearningpaths'] = 'Synchroniser les plans à partir des parcours d\'apprentissage du modèle de plan d\'apprentissage';
+$string['addlearningpathstosync'] = 'Ajouter des parcours d\'apprentissage à synchroniser';

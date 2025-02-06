@@ -21,83 +21,83 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['pluginname'] = 'Completion Overview Report';
-$string['privacy:metadata:local_report_user_lic_allocs:id'] = 'Local report user license allocation record ID';
-$string['privacy:metadata:local_report_user_lic_allocs:courseid'] = 'Course ID';
-$string['privacy:metadata:local_report_user_lic_allocs:action'] = 'Allocation action';
-$string['privacy:metadata:local_report_user_lic_allocs:userid'] = 'User ID';
-$string['privacy:metadata:local_report_user_lic_allocs:licenseid'] = 'License ID';
-$string['privacy:metadata:local_report_user_lic_allocs:issuedate'] = 'License issue Unix timestamp';
-$string['privacy:metadata:local_report_user_lic_allocs'] = 'Local report user license allocation user information';
-$string['hideexpiry'] = 'Highlight expire';
-$string['report_completion_overview:view'] = 'View course completion overview report';
-$string['showexpiry'] = 'Highlight all';
-$string['showexpiryonly'] = 'Highlight course with valid length only';
-$string['showexpiryonly_help'] = 'If this option is checked, then courses which do not have a valid length will not be displayed in colour in the graphical overview by default.';
-$string['showfulldetail'] = 'Show full completion detail';
-$string['showfulldetail_help'] = 'If this option is checked, then all of the completion information is displayed, otherwise it\'s just the completion and expiry dates.';
-$string['warningduration'] = 'Expired warning limit';
-$string['warningduration_help'] = 'This is the value of time before a course expires where the report will show the expiry warning colours instead of the OK colours.';
-$string['coursesummary'] = 'Enroled: {$a->enrolled}
-Started: {$a->timestarted}
-Completed: {$a->timecompleted}
-Expires: {$a->timeexpires}
-Grade: {$a->finalscore}';
-$string['coursesummary_extra_indate'] = 'Enrolled: {$a->enrolled}
-Started: {$a->timestarted}
-Completed: {$a->timecompleted}
-Expires: {$a->timeexpires}
-Grade: {$a->finalscore}
-Last completed: {$a->lastcompleted}
-Expires: {$a->timeexpired}';
-$string['coursesummary_extra_outdate'] = 'Enrolled: {$a->enrolled}
-Started: {$a->timestarted}
-Completed: {$a->timecompleted}
-Expires: {$a->timeexpires}
-Grade: {$a->finalscore}
-Last completed: {$a->lastcompleted}
-Expired: {$a->timeexpired}';
-$string['coursesummary_expired'] = 'Enrolled: {$a->enrolled}
-Started: {$a->timestarted}
-Expired: {$a->timeexpires}
-Grade: {$a->finalscore}';
-$string['coursesummary_noexpiry'] = 'Enrolled: {$a->enrolled}
-Started: {$a->timestarted}
-Completed: {$a->timecompleted}
-Grade: {$a->finalscore}';
-$string['coursesummary_nograde'] = 'Enroled: {$a->enrolled}
-Started: {$a->timestarted}
-Completed: {$a->timecompleted}
-Expires: {$a->timeexpires}
-Result: Passed';
-$string['coursesummary_nograde_noexpiry'] = 'Enroled: {$a->enrolled}
-Started: {$a->timestarted}
-Completed: {$a->timecompleted}
-Result: Passed';
-$string['coursesummary_partial'] = 'Completed: {$a->timecompleted}
-Expires: {$a->timeexpires}';
-$string['coursesummary_partial_extra_indate'] = 'Completed: {$a->timecompleted}
-Expires: {$a->timeexpires}
-Last completed: {$a->lastcompleted}
-Expires: {$a->timeexpired}';
-$string['coursesummary_partial_extra_outdate'] = 'Completed: {$a->timecompleted}
-Expires: {$a->timeexpires}
-Last completed: {$a->lastcompleted}
-Expired: {$a->timeexpired}';
-$string['report_completion_overview_title'] = 'Completion overview report';
-$string['notcompleted'] = 'In progress';
-$string['notcompleted-expiring'] = 'In progress (Due)';
-$string['notcompleted-indate'] = 'In progress (OK)';
-$string['notcompleted-outdate'] = 'In progress (Expired)';
-$string['notenrolled']  = 'Not enrolled';
-$string['notenrolled-expiring']  = 'Not enrolled (Due)';
-$string['notenrolled-indate']  = 'Not enrolled (OK)';
-$string['notenrolled-outdate']  = 'Not enrolled (Expired)';
+$string['pluginname'] = 'Rapport de vue d\'ensemble de la complétion';
+$string['privacy:metadata:local_report_user_lic_allocs:id'] = 'ID de l\'enregistrement de l\'allocation de licence utilisateur du rapport local';
+$string['privacy:metadata:local_report_user_lic_allocs:courseid'] = 'ID du cours';
+$string['privacy:metadata:local_report_user_lic_allocs:action'] = 'Action d\'allocation';
+$string['privacy:metadata:local_report_user_lic_allocs:userid'] = 'ID de l\'utilisateur';
+$string['privacy:metadata:local_report_user_lic_allocs:licenseid'] = 'ID de licence';
+$string['privacy:metadata:local_report_user_lic_allocs:issuedate'] = 'Horodatage Unix de délivrance de licence';
+$string['privacy:metadata:local_report_user_lic_allocs'] = 'Informations utilisateur de l\'allocation de licence utilisateur du rapport local';
+$string['hideexpiry'] = 'Surligner l\'expiration';
+$string['report_completion_overview:view'] = 'Voir le rapport de vue d\'ensemble de la complétion des cours';
+$string['showexpiry'] = 'Surligner tout';
+$string['showexpiryonly'] = 'Surligner uniquement les cours avec une durée valide';
+$string['showexpiryonly_help'] = 'Si cette option est cochée, alors les cours qui n\'ont pas une durée valide ne seront pas affichés en couleur dans la vue d\'ensemble graphique par défaut.';
+$string['showfulldetail'] = 'Afficher les détails complets de la complétion';
+$string['showfulldetail_help'] = 'Si cette option est cochée, alors toutes les informations de complétion sont affichées, sinon ce ne sont que les dates de complétion et d\'expiration.';
+$string['warningduration'] = 'Limite d\'avertissement d\'expiration';
+$string['warningduration_help'] = 'C\'est la valeur de temps avant qu\'un cours n\'expire où le rapport affichera les couleurs d\'avertissement d\'expiration au lieu des couleurs OK.';
+$string['coursesummary'] = 'Inscrit: {$a->enrolled}
+Commencé: {$a->timestarted}
+Terminé: {$a->timecompleted}
+Expire: {$a->timeexpires}
+Note: {$a->finalscore}';
+$string['coursesummary_extra_indate'] = 'Inscrit: {$a->enrolled}
+Commencé: {$a->timestarted}
+Terminé: {$a->timecompleted}
+Expire: {$a->timeexpires}
+Note: {$a->finalscore}
+Dernière complétion: {$a->lastcompleted}
+Expire: {$a->timeexpired}';
+$string['coursesummary_extra_outdate'] = 'Inscrit: {$a->enrolled}
+Commencé: {$a->timestarted}
+Terminé: {$a->timecompleted}
+Expire: {$a->timeexpires}
+Note: {$a->finalscore}
+Dernière complétion: {$a->lastcompleted}
+Expire: {$a->timeexpired}';
+$string['coursesummary_expired'] = 'Inscrit: {$a->enrolled}
+Commencé: {$a->timestarted}
+Expire: {$a->timeexpires}
+Note: {$a->finalscore}';
+$string['coursesummary_noexpiry'] = 'Inscrit: {$a->enrolled}
+Commencé: {$a->timestarted}
+Terminé: {$a->timecompleted}
+Note: {$a->finalscore}';
+$string['coursesummary_nograde'] = 'Inscrit: {$a->enrolled}
+Commencé: {$a->timestarted}
+Terminé: {$a->timecompleted}
+Expire: {$a->timeexpires}
+Résultat: Réussi';
+$string['coursesummary_nograde_noexpiry'] = 'Inscrit: {$a->enrolled}
+Commencé: {$a->timestarted}
+Terminé: {$a->timecompleted}
+Résultat: Réussi';
+$string['coursesummary_partial'] = 'Terminé: {$a->timecompleted}
+Expire: {$a->timeexpires}';
+$string['coursesummary_partial_extra_indate'] = 'Terminé: {$a->timecompleted}
+Expire: {$a->timeexpires}
+Dernière complétion: {$a->lastcompleted}
+Expire: {$a->timeexpired}';
+$string['coursesummary_partial_extra_outdate'] = 'Terminé: {$a->timecompleted}
+Expire: {$a->timeexpires}
+Dernière complétion: {$a->lastcompleted}
+Expire: {$a->timeexpired}';
+$string['report_completion_overview_title'] = 'Rapport de vue d\'ensemble de la complétion';
+$string['notcompleted'] = 'En cours';
+$string['notcompleted-expiring'] = 'En cours (A faire)';
+$string['notcompleted-indate'] = 'En cours (OK)';
+$string['notcompleted-outdate'] = 'En cours (Expire)';
+$string['notenrolled']  = 'Non inscrit';
+$string['notenrolled-expiring']  = 'Non inscrit (A faire)';
+$string['notenrolled-indate']  = 'Non inscrit (OK)';
+$string['notenrolled-outdate']  = 'Non inscrit (Expire)';
 $string['indate'] = 'OK';
-$string['expiring'] = 'Due';
-$string['expired'] = 'Expired';
-$string['coursestatus'] = '{$a} status';
-$string['coursecompletion'] = '{$a} completion';
-$string['courseexpiry'] = '{$a} expiry';
-$string['bycourses'] = 'View by course';
-$string['byusers'] = 'View by user';
+$string['expiring'] = 'A faire';
+$string['expired'] = 'Expire';
+$string['coursestatus'] = '{$a} statut';
+$string['coursecompletion'] = '{$a} complétion';
+$string['courseexpiry'] = '{$a} expiration';
+$string['bycourses'] = 'Vue par cours';
+$string['byusers'] = 'Vue par utilisateur';

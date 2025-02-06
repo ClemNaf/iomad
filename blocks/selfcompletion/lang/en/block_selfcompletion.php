@@ -22,9 +22,9 @@
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-$string['alreadyselfcompleted'] = 'You have already marked yourself as complete in this course';
-$string['completecourse'] = 'Complete course';
-$string['pluginname'] = 'Self completion';
-$string['selfcompletionnotenabled'] = 'The self completion criteria has not been enabled for this course';
-$string['selfcompletion:addinstance'] = 'Add a new self completion block';
-$string['privacy:metadata'] = 'The Self completion block only shows data stored in other locations.';
+$string['alreadyselfcompleted'] = 'Vous vous êtes déjà marqué comme terminé dans ce cours';
+$string['completecourse'] = 'Cours terminé';
+$string['pluginname'] = 'Auto-complétion';
+$string['selfcompletionnotenabled'] = 'Les critères d\'auto-complétion n\'ont pas été activés pour ce cours';
+$string['selfcompletion:addinstance'] = 'Ajouter un nouveau bloc d\'auto-complétion';
+$string['privacy:metadata'] = 'Le bloc d\'auto-complétion ne montre que des données stockées ailleurs.';
