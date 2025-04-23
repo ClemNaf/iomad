@@ -423,9 +423,9 @@ class enrol_license_plugin extends enrol_plugin {
                 $event->trigger();
 
                 // Send welcome.
-                if ($instance->customint4) {
-                    $this->email_welcome_message($instance, $USER);
-                }
+                // if ($instance->customint4 != ENROL_DO_NOT_SEND_EMAIL) {
+                //     $this->email_welcome_message($instance, $USER);
+                // }
             }
         } else {
             // This user can not license enrol using this instance. Using an empty form to keep
