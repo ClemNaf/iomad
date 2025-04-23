@@ -130,7 +130,7 @@ class company_edit_form extends \company_moodleform {
                             get_string('companycity', 'block_iomad_company_admin'),
                             'maxlength="50" size="50"');
         $mform->setType('city', PARAM_NOTAGS);
-        $mform->addRule('city', $strrequired, 'required', null, 'client');
+        // $mform->addRule('city', $strrequired, 'required', null, 'client');
 
         $mform->addElement('text', 'region',
                             get_string('companyregion', 'block_iomad_company_admin'),
@@ -145,7 +145,7 @@ class company_edit_form extends \company_moodleform {
         $choices = get_string_manager()->get_list_of_countries();
         $choices = array('' => get_string('selectacountry').'...') + $choices;
         $mform->addElement('select', 'country', get_string('selectacountry'), $choices);
-        $mform->addRule('country', $strrequired, 'required', null, 'client');
+        // $mform->addRule('country', $strrequired, 'required', null, 'client');
         if (!empty($CFG->country)) {
             $mform->setDefault('country', $CFG->country);
         }

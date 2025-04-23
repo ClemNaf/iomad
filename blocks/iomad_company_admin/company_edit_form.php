@@ -489,19 +489,19 @@ if ($mform->is_cancelled()) {
             $data->id = $companyid;
 
             // Set up course category for company.
-            $coursecat = new stdclass();
-            $coursecat->name = $data->name;
-            $coursecat->sortorder = 999;
-            $coursecat->id = $DB->insert_record('course_categories', $coursecat);
-            $coursecat->context = context_coursecat::instance($coursecat->id);
-            $categorycontext = $coursecat->context;
-            $categorycontext->mark_dirty();
-            $DB->update_record('course_categories', $coursecat);
-            fix_course_sortorder();
-            $companydetails = $DB->get_record('company', array('id' => $companyid));
-            $companydetails->category = $coursecat->id;
-            $DB->update_record('company', $companydetails);
-            $redirectmessage = get_string('companycreatedok', 'block_iomad_company_admin');
+            // $coursecat = new stdclass();
+            // $coursecat->name = $data->name;
+            // $coursecat->sortorder = 999;
+            // $coursecat->id = $DB->insert_record('course_categories', $coursecat);
+            // $coursecat->context = context_coursecat::instance($coursecat->id);
+            // $categorycontext = $coursecat->context;
+            // $categorycontext->mark_dirty();
+            // $DB->update_record('course_categories', $coursecat);
+            // fix_course_sortorder();
+            // $companydetails = $DB->get_record('company', array('id' => $companyid));
+            // $companydetails->category = $coursecat->id;
+            // $DB->update_record('company', $companydetails);
+            // $redirectmessage = get_string('companycreatedok', 'block_iomad_company_admin');
 
             // Deal with any parent company assignments.
             if (!empty($companydetails->parentid)) {
