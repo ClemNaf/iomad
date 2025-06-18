@@ -480,6 +480,51 @@ function xmldb_block_iomad_commerce_upgrade($oldversion) {
         // Iomad_commerce savepoint reached.
         upgrade_block_savepoint(true, 2024112400, 'iomad_commerce');
     }
+    if ($oldversion < 2025061000) {
 
+        // Define field id to be added to shoptag.
+        $table = new xmldb_table('shoptag');
+        $field = new xmldb_field('companyid', XMLDB_TYPE_INTEGER, '20', null, XMLDB_NOTNULL, null, '0', 'tag');
+
+        // Conditionally launch add field id.
+        if (!$dbman->field_exists($table, $field)) {
+            $dbman->add_field($table, $field);
+        }
+
+        // Rename field itemid on table course_shoptag to NEWNAMEGOESHERE.
+        $table = new xmldb_table('course_shoptag');
+        $field = new xmldb_field('courseid', XMLDB_TYPE_INTEGER, '10', null, XMLDB_NOTNULL, null, null, 'id');
+
+        // Launch rename field itemid.
+        if ($dbman->field_exists($table, $field)) {
+            $dbman->rename_field($table, $field, 'itemid');
+        }
+
+        // Add a company id for each shoptag record and if it is used in multiple companies then create a seperate record for each company
+        if ($shoptags = $DB->get_records('shoptag')) {
+            // Loop through the records returned
+            foreach ($shoptags as $shoptag) {
+                // Is the tag in use?
+                if ($items = $DB->get_records_sql("SELECT cs.id,cs.itemid,css.companyid
+                                                   FROM {course_shoptag} cs
+                                                   JOIN {course_shopsettings} css ON (cs.itemid = css.id)
+                                                   WHERE cs.shoptagid = :shoptagid",
+                                                  ['shoptagid' => $shoptag->id])) {
+                    // Cycle through them all and create a shoptag for that company.
+                    foreach ($items as $item) {
+                        $tagrecord = (object) ['tag' => $shoptag->tag, 'companyid' => $item->companyid];
+                        $tagrecord->id = $DB->insert_record('shoptag', $tagrecord);
+                        $DB->set_field('course_shoptag', 'shoptagid', $tagrecord->id, ['id' => $item->id]);
+                    }
+                    $DB->delete_records('shoptag', ['id' => $shoptag->id]);
+                } else {
+                    $DB->delete_records('shoptag', ['id' => $shoptag->id]);
+                }
+            }
+        }
+
+        // Iomad_commerce savepoint reached.
+        upgrade_block_savepoint(true, 2025061000, 'iomad_commerce');
+    }
     return $result;
 }

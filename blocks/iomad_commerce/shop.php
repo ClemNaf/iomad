@@ -81,7 +81,7 @@ if (isset($SESSION->shoptag) && $SESSION->shoptag != '') {
     $tagfilters .= get_string('filtered_by_tag', 'block_iomad_commerce', '<em>' . $SESSION->shoptag . '</em>' );
     $tagfilters .= "</li>";
 
-    $tagjoin = 'INNER JOIN {course_shoptag} cst ON cst.itemid = csc.id
+    $tagjoin = 'INNER JOIN {course_shoptag} cst ON cst.itemid = css.id
                 INNER JOIN {shoptag} st ON cst.shoptagid = st.id';
     $tagwhere = ' AND st.tag = :tag ';
     $sqlparams['tag'] = $SESSION->shoptag;
@@ -161,6 +161,9 @@ $sql = 'FROM {course_shopsettings} css
                                                   WHERE itemid = css.id ORDER BY price LIMIT 1 ))
         WHERE css.enabled = 1
         AND css.companyid =:companyid
+        AND (css.allow_single_purchase = 1 or css.id = sbp.itemid
+                                              AND sbp.id = (SELECT id FROM {course_shopblockprice}
+                                              WHERE itemid = css.id ORDER BY price LIMIT 1 ))
         ' . $tagwhere . $searchwhere . $typewhere . '
         GROUP BY css.id, sbp.id ORDER BY css.name';
 

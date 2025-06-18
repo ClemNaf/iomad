@@ -72,6 +72,8 @@ $returnurl = $baseurl;
 if ($default && iomad::has_capability('block/iomad_commerce:manage_default', $companycontext)) {
     $mycompanyid = $companyid;
     $companyid = 0;
+} else {
+    $mycompanyid = $companyid;
 }
 
 // Delete a selected product from the shop, after confirmation.
@@ -311,6 +313,11 @@ if (iomad::has_capability('block/iomad_commerce:manage_default', $companycontext
                                                ['createnew' => 1,
                                                 'default' => !$default]),
                                                $defaultstring);
+}
+// Check if the user has the capability to manage shop tags
+if (iomad::has_capability('block/iomad_commerce:manage_tags', $companycontext)) {
+    // If the user has the manage_tags capability display the button which redirects them to the manage tags page
+    echo $OUTPUT->single_button(new moodle_url("$CFG->wwwroot/blocks/iomad_commerce/manage_tags.php"), get_string('managetags', 'block_iomad_commerce'), 'get');
 }
 
 echo $OUTPUT->single_button(new moodle_url($CFG->wwwroot . '/blocks/iomad_company_admin/index.php'), get_string('cancel'));

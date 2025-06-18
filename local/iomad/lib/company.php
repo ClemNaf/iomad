@@ -1627,12 +1627,17 @@ class company {
                  && $managertype == 0) {
                 // Demoting a manager to a user.
                 // Deal with company course roles.
+                $multidepartment = $DB->get_records_sql('SELECT * FROM {company_users} 
+                                                            WHERE companyid = :companyid 
+                                                            AND departmentid != :departmentid',
+                                                            ['companyid' => $companyid, 'departmentid' => $departmentid]);
                 if ($CFG->iomad_autoenrol_managers &&
-                    !empty($companycourses)) {
+                    !empty($companycourses) && 
+                    empty($multidepartment)) {
                     foreach ($companycourses as $companycourse) {
                         if ($DB->record_exists('course', array('id' => $companycourse->courseid))) {
                             company_user::unenrol($userid, array($companycourse->courseid),
-                                                  $companycourse->companyid);
+                                                  $companycourse->companyid, false);
                         }
                     }
                 }
@@ -1659,9 +1664,11 @@ class company {
                     $event->trigger();
                     return true;
                 } else {
-                    role_unassign($companymanagerrole->id, $userid, $companycontext->id);
-                    role_unassign($departmentmanagerrole->id, $userid, $companycontext->id);
-                    role_unassign($companyreporterrole->id, $userid, $companycontext->id);
+                    if (empty($multidepartment)) {
+                        role_unassign($companymanagerrole->id, $userid, $companycontext->id);
+                        role_unassign($departmentmanagerrole->id, $userid, $companycontext->id);
+                        role_unassign($companyreporterrole->id, $userid, $companycontext->id);
+                    }
                 }   
                 if ($user->managertype == 1) {
                     // Deal with child companies.
@@ -1684,8 +1691,10 @@ class company {
                                              'user' => $userrec));
                     }
                 }
-                // Make sure all department records in the company match this.
-                $DB->set_field('company_users', 'managertype', 0, ['companyid' => $companyid, 'userid' => $userid]);
+                if (empty($multidepartment)) {
+                    // Make sure all department records in the company match this.
+                    $DB->set_field('company_users', 'managertype', 0, ['companyid' => $companyid, 'userid' => $userid]);
+                }
             }
             if ($educator && $user->educator != 1 &&
                  !$CFG->iomad_autoenrol_managers &&
@@ -3121,7 +3130,7 @@ class company {
         global $DB;
 
         // Can we view hidden courses?
-        $hiddensql = " AND c.visible = 0 ";
+        $hiddensql = " AND c.visible = 1 ";
         $showhidden = false;
         $hiddenstring = " (" . get_string('hidden', 'grades') . ")";
         if (iomad::has_capability('block/iomad_company_admin:hideshowcourses', $this->context) ||
@@ -3210,7 +3219,7 @@ class company {
             $displayname = format_string($course->fullname, true, 1);
             if ($course->visible == 0) {
                 if ($showhidden) {
-                    $displayname = format_string($displayname . $hiddenstring);
+                    $displayname = format_string($displayname . $hiddenstring, true, 1);
                 } else {
                     unset($retcourses[$courseid]);
                     continue;
