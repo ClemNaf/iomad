@@ -201,8 +201,7 @@ if (!$showall && $category = $DB->get_record_sql('select uic.id, uic.name from {
             $fieldnames[$field->id] = 'profile_field_'.$field->shortname;
             require_once($CFG->dirroot.'/user/profile/field/'.$field->datatype.'/field.class.php');
             $newfield = 'profile_field_'.$field->datatype;
-            $shortname = ($field->datatype == 'textarea') ? $field->shortname.'[text]' : $field->shortname;
-            ${'profile_field_'.$field->shortname} = optional_param('profile_field_'.$shortname, null, PARAM_ALPHANUMEXT);
+            ${'profile_field_'.$field->shortname} = optional_param('profile_field_'.$field->shortname, null, PARAM_ALPHANUMEXT);
         }
     }
     if ($categories = $DB->get_records_sql("SELECT id FROM {user_info_category}
@@ -666,6 +665,16 @@ if (iomad::has_capability('block/iomad_company_admin:editusers', $companycontext
 // Display the totals found.
 $usercount = $DB->count_records_sql($countsql, $sqlparams);
 echo $output->heading(get_string('totalusers', 'block_iomad_company_admin', $usercount));
+
+if (isset($USER->editing) && $USER->editing) {
+    // Don't return users with a role that the user does not have the capability to assign
+    if (!has_capability('block/iomad_company_admin:assign_company_manager', $companycontext)) {
+        $wheresql .= ' AND managertype != 1';
+    }
+    if (!has_capability('block/iomad_company_admin:assign_company_reporter', $companycontext)) {
+        $wheresql .= ' AND managertype != 4';
+    }
+}
 
 // Actually create and display the table.
 $baseurl->remove_params(['page']);

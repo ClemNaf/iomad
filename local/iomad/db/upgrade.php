@@ -2551,5 +2551,54 @@ function xmldb_local_iomad_upgrade($oldversion) {
         upgrade_plugin_savepoint(true, 2024090401, 'local', 'iomad');
     }
 
+    if ($oldversion < 2025062600) {
+
+        // Define table company_pages to be created.
+        $table = new xmldb_table('company_pages');
+
+        // Adding fields to table company_pages.
+        $table->add_field('id', XMLDB_TYPE_INTEGER, '10', null, XMLDB_NOTNULL, XMLDB_SEQUENCE, null);
+        $table->add_field('companyid', XMLDB_TYPE_INTEGER, '10', null, XMLDB_NOTNULL, null, null);
+        $table->add_field('type', XMLDB_TYPE_CHAR, '10', null, null, null, null);
+        $table->add_field('pageid', XMLDB_TYPE_INTEGER, '10', null, XMLDB_NOTNULL, null, null);
+
+        // Adding keys to table company_pages.
+        $table->add_key('primary', XMLDB_KEY_PRIMARY, ['id']);
+
+        // Conditionally launch create table for company_pages.
+        if (!$dbman->table_exists($table)) {
+            $dbman->create_table($table);
+        }
+
+        // Iomad savepoint reached.
+        upgrade_plugin_savepoint(true, 2025062600, 'local', 'iomad');
+    }
+
+    if ($oldversion < 2025070200) {
+        // Add the company context to the companymanager, companydepartmentmanager and companyreportonly roles
+        // and remove the system context.
+
+        foreach (['companymanager', 'companydepartmentmanager', 'companyreporter'] as $rolename) {
+            if ($rolerec = $DB->get_record('role', ['shortname' => $rolename])) {
+                if (!$DB->get_record('role_context_levels', ['roleid' => $rolerec->id, 'contextlevel' => CONTEXT_COMPANY])) {
+                    $DB->insert_record('role_context_levels', ['roleid' => $rolerec->id, 'contextlevel' => CONTEXT_COMPANY]);
+                }
+                $DB->delete_records('role_context_levels', ['roleid' => $rolerec->id, 'contextlevel' => CONTEXT_SYSTEM]);
+            }
+        }
+
+        // Clear down SYSTEM roles from the company role restrictions and templates tables.
+        $noncompanyroles = $DB->get_records_sql("SELECT id FROM {role} WHERE shortname not in ('companymanager', 'companydepartmentmanager', 'companyreporter')");
+
+        foreach ($noncompanyroles as $role) {
+            $DB->delete_records('company_role_templates_caps', ['roleid' => $role->id]);
+            $DB->delete_records('company_role_restriction', ['roleid' => $role->id]);
+        }
+
+        // Iomad savepoint reached.
+        upgrade_plugin_savepoint(true, 2025070200, 'local', 'iomad');
+    }
+
     return $result;
+
 }
