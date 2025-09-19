@@ -19,13 +19,13 @@
  * @copyright 2021 Derick Turner
  * @author    Derick Turner
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- * @push date 2025/07/04
+ * @push date 2025/08/25
  */
 
-$plugin->release  = '4.5.5 (Build: 20250609)'; // Human-friendly version name
+$plugin->release  = '4.5.6 (Build: 20250811)'; // Human-friendly version name
 $plugin->component  = 'local_iomad';
 $plugin->requires = 2019052000;   // Requires this Moodle version.
-$plugin->version  = 2025070200;   // The (date) version of this plugin.
+$plugin->version  = 2025070200.405;   // The (date) version of this plugin.
 $plugin->dependencies = [
         'tool_checklearningrecords' => 2024100700,
         'tool_iomadmerge' => 2024100700,

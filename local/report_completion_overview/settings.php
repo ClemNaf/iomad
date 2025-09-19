@@ -23,6 +23,15 @@
 
 defined('MOODLE_INTERNAL') || die;
 
+// IOMAD
+require_once($CFG->dirroot . '/local/iomad/lib/company.php');
+$companyid = iomad::get_my_companyid(context_system::instance(), false);
+$postfix = "";
+if (!empty($companyid)) {
+    $postfix = "_$companyid";
+}
+
+
 // Basic navigation settings
 require($CFG->dirroot . '/local/iomad/lib/basicsettings.php');
 
@@ -43,6 +52,15 @@ if ($hassiteconfig && !empty($USER->id)) {
         30*24*60*60)
     );
 
+    if ($companyid > 0) {
+        $settings->add(new admin_setting_configduration(
+            'local_report_completion_overview/warningduration' . $postfix,
+            get_string('warningdurationcompany', 'local_report_completion_overview'),
+            get_string('warningduration_help', 'local_report_completion_overview'),
+            30*24*60*60)
+        );
+    }
+
     $settings->add(new admin_setting_configcheckbox(
         'local_report_completion_overview/showfulldetail',
         get_string('showfulldetail', 'local_report_completion_overview'),
@@ -54,6 +72,13 @@ if ($hassiteconfig && !empty($USER->id)) {
         'local_report_completion_overview/showexpiryonly',
         get_string('showexpiryonly', 'local_report_completion_overview'),
         get_string('showexpiryonly_help', 'local_report_completion_overview'),
+        false)
+    );
+
+    $settings->add(new admin_setting_configcheckbox(
+        'local_report_completion_overview/enrolledonly',
+        get_string('showenrolledonly', 'local_report_completion_overview'),
+        get_string('showenrolledonly_help', 'local_report_completion_overview'),
         false)
     );
 }

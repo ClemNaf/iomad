@@ -496,7 +496,8 @@ function file_rewrite_pluginfile_urls($text, $file, $contextid, $component, $fil
     if (!isset($options['forcehttps'])) {
         $options['forcehttps'] = false;
     }
-
+    
+    //$baseurl = company::get_relativeurl("{$CFG->wwwroot}/{$file}");
     $baseurl = "{$CFG->wwwroot}/{$file}";
     if (!empty($options['includetoken'])) {
         $userid = $options['includetoken'] === true ? $USER->id : $options['includetoken'];
@@ -504,6 +505,7 @@ function file_rewrite_pluginfile_urls($text, $file, $contextid, $component, $fil
         $finalfile = basename($file);
         $tokenfile = "token{$finalfile}";
         $file = substr($file, 0, strlen($file) - strlen($finalfile)) . $tokenfile;
+        //$baseurl = company::get_relativeurl("{$CFG->wwwroot}/{$file}");
         $baseurl = "{$CFG->wwwroot}/{$file}";
 
         if (!$CFG->slasharguments) {
@@ -2226,10 +2228,11 @@ function readfile_accel($file, $mimetype, $accelerate) {
         header('Content-Type: '.$mimetype);
     }
 
-    $lastmodified = is_object($file) ? $file->get_timemodified() : filemtime($file);
+    $isfileobj = is_object($file);
+    $lastmodified = $isfileobj ? $file->get_timemodified() : filemtime($file);
     header('Last-Modified: '. gmdate('D, d M Y H:i:s', $lastmodified) .' GMT');
 
-    if (is_object($file)) {
+    if ($isfileobj) {
         header('Etag: "' . $file->get_contenthash() . '"');
         if (isset($_SERVER['HTTP_IF_NONE_MATCH']) and trim($_SERVER['HTTP_IF_NONE_MATCH'], '"') === $file->get_contenthash()) {
             header('HTTP/1.1 304 Not Modified');
@@ -2238,7 +2241,7 @@ function readfile_accel($file, $mimetype, $accelerate) {
     }
 
     // if etag present for stored file rely on it exclusively
-    if (!empty($_SERVER['HTTP_IF_MODIFIED_SINCE']) and (empty($_SERVER['HTTP_IF_NONE_MATCH']) or !is_object($file))) {
+    if (!empty($_SERVER['HTTP_IF_MODIFIED_SINCE']) && (empty($_SERVER['HTTP_IF_NONE_MATCH']) || !$isfileobj)) {
         // get unixtime of request header; clip extra junk off first
         $since = strtotime(preg_replace('/;.*$/', '', $_SERVER["HTTP_IF_MODIFIED_SINCE"]));
         if ($since && $since >= $lastmodified) {
@@ -2254,7 +2257,7 @@ function readfile_accel($file, $mimetype, $accelerate) {
     }
 
     if ($accelerate) {
-        if (is_object($file)) {
+        if ($isfileobj) {
             $fs = get_file_storage();
             if ($fs->supports_xsendfile()) {
                 if ($fs->xsendfile_file($file)) {
@@ -2271,7 +2274,8 @@ function readfile_accel($file, $mimetype, $accelerate) {
         }
     }
 
-    $filesize = is_object($file) ? $file->get_filesize() : filesize($file);
+    $filesize = $isfileobj ? $file->get_filesize() : filesize($file);
+    $filename = $isfileobj ? $file->get_filename() : $file;
 
     header('Last-Modified: '. gmdate('D, d M Y H:i:s', $lastmodified) .' GMT');
 
@@ -2305,10 +2309,10 @@ function readfile_accel($file, $mimetype, $accelerate) {
                 $ranges = false;
             }
             if ($ranges) {
-                if (is_object($file)) {
+                if ($isfileobj) {
                     $handle = $file->get_content_file_handle();
                     if ($handle === false) {
-                        throw new file_exception('storedfilecannotreadfile', $file->get_filename());
+                        throw new file_exception('storedfilecannotreadfile', $filename);
                     }
                 } else {
                     $handle = fopen($file, 'rb');
@@ -2334,7 +2338,12 @@ function readfile_accel($file, $mimetype, $accelerate) {
             // We do not expect any content in the buffer when we are serving files.
             $buffercontents = ob_get_clean();
             if ($buffercontents !== '') {
-                error_log('Non-empty default output handler buffer detected while serving the file ' . $file);
+                // Include a preview of the first 20 characters of the output buffer to help identify
+                // what's causing it to be non-empty. This is useful for diagnosing unexpected output
+                // without exposing full content.
+                $buffercontentspreview = substr($buffercontents, 0, 20);
+                debugging("Non-empty default output handler buffer detected while serving the file {$filename}. " .
+                    "Buffer contents (first 20 characters): {$buffercontentspreview}", DEBUG_DEVELOPER);
             }
         } else {
             // Some handlers such as zlib output compression may have file signature buffered - flush it.
@@ -2343,7 +2352,7 @@ function readfile_accel($file, $mimetype, $accelerate) {
     }
 
     // send the whole file content
-    if (is_object($file)) {
+    if ($isfileobj) {
         $file->readfile();
     } else {
         if (readfile_allow_large($file, $filesize) === false) {

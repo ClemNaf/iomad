@@ -499,7 +499,7 @@ class current_company_course_user_selector extends company_user_selector_base {
         $countfields = 'SELECT COUNT(1)';
 
         $sql = " FROM {user} u
-                 JOIN {company_users} cu ON (cu.userid = u.id AND cu.managertype = 0 $departmentsql)
+                 JOIN {company_users} cu ON (cu.userid = u.id AND cu.educator = 0 $departmentsql)
                  LEFT JOIN {user_info_data} ui ON (ui.userid = u.id AND ui.userid = cu.userid)
                  JOIN {user_enrolments} ue ON (ue.userid = u.id)
                  JOIN {enrol} e ON (ue.enrolid = e.id AND ".$DB->sql_compare_text('e.enrol')."='manual' AND e.status = 0)
@@ -515,7 +515,10 @@ class current_company_course_user_selector extends company_user_selector_base {
         if (!$this->is_validating() && !$all) {
             $potentialmemberscount = $DB->count_records_sql($countfields . $sql, $params);
             if ($potentialmemberscount > $CFG->iomad_max_select_users) {
-                return $this->too_many_results($search, $potentialmemberscount);
+                return [
+                    get_string('toomanyenrolments', 'block_iomad_company_admin', $potentialmemberscount) => [],
+                    get_string('pleaseusesearch') => []
+                ];
             }
         }
         $availableusers = $DB->get_records_sql($fields . $sql . $order, $params);
@@ -711,7 +714,8 @@ class potential_company_course_user_selector extends company_user_selector_base 
         if (!empty($parentcompanies)) {
             $userfilter = " AND u.id NOT IN (
                              SELECT userid FROM {company_users}
-                             WHERE companyid IN (" . implode(',', array_keys($parentcompanies)) . "))";
+                             WHERE managertype = 1
+                             AND companyid IN (" . implode(',', array_keys($parentcompanies)) . "))";
         } else {
             $userfilter = "";
         }
@@ -863,17 +867,18 @@ class potential_department_user_selector extends company_user_selector_base {
             $userfilter = " AND NOT u.id IN (" . implode(",",$departmentusers) . ")
                             AND u.id NOT IN (
                               SELECT userid FROM {company_users}
-                              WHERE companyid IN (" . implode(',', array_keys($parentcompanies)) . "))";
+                              WHERE managertype = 1
+                              AND companyid IN (" . implode(',', array_keys($parentcompanies)) . "))";
         } else {
             $userfilter = " AND NOT u.id IN (" . implode(",",$departmentusers) . ")";
         }
 
         // Filter out users who are in another department with a elevated role and that elevated role is not selected
         $userfilter .= " AND u.id NOT IN (
-                            SELECT userid FROM {company_users} 
-                            WHERE companyid = ".$this->companyid." 
-                            AND managertype != 0 
-                            AND departmentid != ".$this->departmentid." 
+                            SELECT userid FROM {company_users}
+                            WHERE companyid = ".$this->companyid."
+                            AND managertype != 0
+                            AND departmentid != ".$this->departmentid."
                             AND managertype != ".$this->roletype.")";
 
         if ($this->roletype != 0) {
@@ -1296,7 +1301,8 @@ class potential_license_user_selector extends company_user_selector_base {
         if (!empty($parentcompanies)) {
             $userfilter .= " AND u.id NOT IN (
                               SELECT userid FROM {company_users}
-                              WHERE companyid IN (" . implode(',', array_keys($parentcompanies)) . "))";
+                              WHERE managertype = 1
+                              AND companyid IN (" . implode(',', array_keys($parentcompanies)) . "))";
         }
 
         // Get the department ids for this license.
@@ -1781,7 +1787,8 @@ class potential_company_group_user_selector extends company_user_selector_base {
         if (!empty($parentcompanies)) {
             $userfilter = " AND u.id NOT IN (
                              SELECT userid FROM {company_users}
-                             WHERE companyid IN (" . implode(',', array_keys($parentcompanies)) . "))";
+                             WHERE managertype = 1
+                             AND companyid IN (" . implode(',', array_keys($parentcompanies)) . "))";
         } else {
             $userfilter = "";
         }
@@ -1909,7 +1916,7 @@ class current_company_thread_user_selector extends company_user_selector_base {
         //  Add the group details.
         foreach ($availableusers as $id => $user) {
             if ($threadgroup = $DB->get_record_sql("
-                SELECT DISTINCT tg.name 
+                SELECT DISTINCT tg.name
                 FROM {microlearning_thread_group} tg
                 JOIN {microlearning_thread_user} tu ON (tg.id = tu.groupid)
                 WHERE tu.userid = $user->id
@@ -1987,7 +1994,8 @@ class potential_company_thread_user_selector extends company_user_selector_base 
         if (!empty($parentcompanies)) {
             $userfilter = " AND u.id NOT IN (
                              SELECT userid FROM {company_users}
-                             WHERE companyid IN (" . implode(',', array_keys($parentcompanies)) . "))";
+                             WHERE managertype = 1
+                             AND companyid IN (" . implode(',', array_keys($parentcompanies)) . "))";
         } else {
             $userfilter = "";
         }

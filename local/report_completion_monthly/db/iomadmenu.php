@@ -34,7 +34,7 @@ function local_report_completion_monthly_menu() {
                 'cap' => 'local/report_completion_monthly:view',
                 'icondefault' => 'report',
                 'style' => 'report',
-                'icon' => 'fa-check-square-o',
+                'icon' => 'fa-calendar-check', // 'fa-check-square-o',
                 'iconsmall' => 'fa-bar-chart-o',
             ),
         );

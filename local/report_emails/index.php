@@ -174,7 +174,7 @@ if (!empty($fieldnames)) {
                 ${$fieldname} = $paramarray[${$fieldname}];
             }
         }
-        if (!empty(${$fieldname})) {
+        if (!empty(${$fieldname}) && ${$fieldname} != -1) {
             $idlist[0] = "We found no one";
             $fieldsql = $DB->sql_compare_text('data')." LIKE '%".${$fieldname}."%' AND fieldid = $id";
             if ($idfields = $DB->get_records_sql("SELECT userid from {user_info_data} WHERE $fieldsql")) {
@@ -228,7 +228,8 @@ $companydepartment = $parentlevel->id;
 if ($parentslist = $company->get_parent_companies_recursive()) {
     $companysql = " AND u.id NOT IN (
                     SELECT userid FROM {company_users}
-                    WHERE companyid IN (" . implode(',', array_keys($parentslist)) ."))";
+                    WHERE managertype = 1
+                    AND companyid IN (" . implode(',', array_keys($parentslist)) ."))";
 } else {
     $companysql = "";
 }
@@ -364,7 +365,7 @@ if ($allemails and confirm_sesskey()) {
         }
 
         //get all of the emails.
-        $allemails = $DB->get_records_sql("SELECT e.id FROM 
+        $allemails = $DB->get_records_sql("SELECT e.id FROM
                                            {user} u
                                            JOIN {email} e
                                            ON (u.id = e.userid)

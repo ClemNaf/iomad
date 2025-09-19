@@ -29,7 +29,24 @@ require_once($CFG->libdir.'/adminlib.php');
 require_once($CFG->dirroot.'/local/iomad_track/db/install.php');
 require_once($CFG->dirroot.'/admin/tool/redocerts/lib.php');
 
-admin_externalpage_setup('toolredocerts');
+iomad::require_capability('tool/redocerts:redocertificates', context_system::instance());
+
+$systemcontext = context_system::instance();
+if (has_capability('moodle/site:configview', $systemcontext)) {
+    admin_externalpage_setup(
+        'toolredocerts',
+        null,
+        [],
+        new moodle_url('/local/iomadcustompage/index.php'),
+        ['pagelayout' => 'admin', 'nosearch' => true]
+    );
+} else {
+    $PAGE->set_pagelayout('standard');
+    $PAGE->set_url('/admin/tool/redocerts/index.php');
+}
+$PAGE->set_context($systemcontext);
+$PAGE->set_secondary_navigation(false);
+$PAGE->set_heading('');
 
 echo $OUTPUT->header();
 
@@ -42,6 +59,7 @@ if (!$data = $form->get_data()) {
     echo $OUTPUT->footer();
     die();
 }
+
 
 // Scroll to the end when finished.
 $PAGE->requires->js_init_code("window.scrollTo(0, 5000000);");

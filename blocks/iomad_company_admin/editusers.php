@@ -116,7 +116,7 @@ if (!iomad::has_capability('block/iomad_company_admin:editusers', $companycontex
 }
 
 // Set the name for the page.
-$linktext = get_string('edit_users_title', 'block_iomad_company_admin');    
+$linktext = get_string('edit_users_title', 'block_iomad_company_admin');
 // Set the url.
 $linkurl = new moodle_url('/blocks/iomad_company_admin/editusers.php');
 
@@ -234,7 +234,7 @@ if (!empty($fieldnames)) {
                 ${$fieldname} = $paramarray[${$fieldname}];
             }
         }
-        if (!empty(${$fieldname})) {
+        if (!empty(${$fieldname}) && ${$fieldname} != -1) {
             $idlist[0] = "We found no one";
             ${$fieldname} = (isset(${$fieldname}['text'])) ? ${$fieldname}['text'] : ${$fieldname};
             $fieldsql = $DB->sql_compare_text('data')." LIKE '%".${$fieldname}."%' AND fieldid = $id";
@@ -271,12 +271,6 @@ $strenrolment = get_string('userenrolments', 'block_iomad_company_admin');
 $struserlicense = get_string('userlicenses', 'block_iomad_company_admin');
 $strshowall = get_string('showallcompanies', 'block_iomad_company_admin');
 $struserreport = get_string('report_users_title', 'local_report_users');
-
-if (empty($CFG->loginhttps)) {
-    $securewwwroot = $CFG->wwwroot;
-} else {
-    $securewwwroot = str_replace('http:', 'https:', $CFG->wwwroot);
-}
 
 if ($confirmuser and confirm_sesskey()) {
     if (!$user = $DB->get_record('user', array('id' => $confirmuser))) {
@@ -533,42 +527,18 @@ if (iomad::has_capability('block/iomad_company_admin:editallusers', $companycont
     // Get department users.
     $departmentusers = company::get_recursive_department_users($departmentid);
     if (count($departmentusers) > 0 || $showall) {
-        $departmentids = "";
-        foreach ($departmentusers as $departmentuser) {
-            if (!empty($departmentids)) {
-                $departmentids .= ",".$departmentuser->userid;
-            } else {
-                $departmentids .= $departmentuser->userid;
-            }
-        }
-        if (!empty($showsuspended)) {
-            $sqlsearch .= " AND u.deleted = 0 ";
-        } else {
-            $sqlsearch .= " AND u.deleted = 0 AND u.suspended = 0 ";
-        }
         if (!$showall) {
-            $sqlsearch .= " AND u.id IN ($departmentids) ";
+            $sqlsearch .= " AND u.id IN (" . implode(',', array_keys($departmentusers)) . ") ";
         }
     } else {
         $sqlsearch = " AND 1 = 0";
     }
-
 } else {
     // Get users company association.
     $departmentusers = company::get_recursive_department_users($departmentid);
     if (count($departmentusers) > 0) {
-        $departmentids = "";
-        foreach ($departmentusers as $departmentuser) {
-            if (!empty($departmentids)) {
-                $departmentids .= ",".$departmentuser->userid;
-            } else {
-                $departmentids .= $departmentuser->userid;
-            }
-        }
-        if (!empty($showsuspended)) {
-            $sqlsearch = " AND u.deleted = 0 AND u.id IN ($departmentids) ";
-        } else {
-            $sqlsearch = " AND u.deleted = 0 AND u.suspended = 0 AND u.id in ($departmentids) ";
+        if (empty($showsuspended)) {
+            $sqlsearch = " AND u.id in (" . implode(',', array_keys($departmentusers)) . ") ";
         }
     } else {
         $sqlsearch = "AND 1 = 0";
@@ -590,8 +560,9 @@ if (!empty($showall)) {
 
     if ($parentslist = $company->get_parent_companies_recursive()) {
         $companysql = " AND c.id = :companyid AND u.id NOT IN (
-                        SELECT userid FROM {company_users}
-                        WHERE companyid IN (" . implode(',', array_keys($parentslist)) ."))";
+                          SELECT userid FROM {company_users}
+                          WHERE managertype = 1 AND
+                          companyid IN (" . implode(',', array_keys($parentslist)) ."))";
     } else {
         $companysql = " AND c.id = :companyid";
     }

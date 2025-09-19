@@ -55,6 +55,11 @@ class company_user {
             $company = company::by_shortname( $data->company );
         }
 
+        // Deal with empty due field.
+        if (empty($data->due)) {
+            $data->due = time();
+        };
+
         // Deal with manager email CCs.
         $companyrec = $DB->get_record('company', array('id' => $company->id));
         if ($companyrec->managernotify == 0) {
@@ -566,7 +571,7 @@ class company_user {
                 if (!$all && $role->roleid == $studentrole->id) {
                     $isstudent = true;
                 } else {
-                    role_unassign($role->id, $user->id, $coursecontext->id);
+                    role_unassign($role->roleid, $user->id, $coursecontext->id);
                 }
             }
             if (!$isstudent) {
@@ -582,7 +587,8 @@ class company_user {
 
                 foreach ($ues as $ue) {
                     if ( $ue->enrolmentinstance->courseid == $user->courseid ) {
-                        $courseenrolmentmanager->unenrol_user($ue);
+                        list ($instance, $plugin) = $courseenrolmentmanager->get_user_enrolment_components($ue);
+                        $plugin->unenrol_user($instance, $ue->userid);
                     }
                 }
                 if ($shared) {
@@ -612,7 +618,7 @@ class company_user {
                     if (!$all && $role->roleid == $studentrole->id) {
                         $isstudent = true;
                     } else {
-                        role_unassign($role->id, $user->id, $coursecontext->id);
+                        role_unassign($role->roleid, $user->id, $coursecontext->id);
                     }
                 }
                 if (!$isstudent) {
@@ -628,7 +634,8 @@ class company_user {
 
                     foreach ($ues as $ue) {
                         if ( $ue->enrolmentinstance->courseid == $courseid ) {
-                            $courseenrolmentmanager->unenrol_user($ue);
+                            list ($instance, $plugin) = $courseenrolmentmanager->get_user_enrolment_components($ue);
+                            $plugin->unenrol_user($instance, $ue->userid);
                         }
                     }
                     if ($shared) {
